@@ -1,0 +1,180 @@
+﻿/* *Clash Display Font by Indian Type Foundry under the ITF license. */
+@import url('clash.css');
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --gray: #ddd;
+    --background: #f9f5f1;
+    --placeholder: #7f7f7f;
+    --accent: #af78fe;
+    --danger: #ea9794;
+    --gray-hover: rgba(221,221,221, 0.1);
+    --border-1: 1px solid;
+    --border-2: 2px solid;
+    --border-radius: 0.25rem;
+    --border-alpha: rgba(221, 221, 221, 0.5);
+}
+
+h1 {
+    font-size: 3.053rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.442rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.954rem;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.563rem;
+}
+
+h5 {
+    font-size: 1.250rem;
+}
+
+small {
+    font-size: 0.800rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'ClashDisplay-Variable', fallback, sans-serif;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0.05rem;
+}
+
+body {
+    background-color: var(--background);
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    font-size: 1.25rem;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.btn {
+    background-color: var(--background);
+    padding: 0.75rem 1rem;
+    transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+    border: var(--border-2) var(--black);
+    border-radius: var(--border-radius);
+}
+
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .btn:not(:disabled):hover {
+        box-shadow: 0.25rem 0.25rem 0 var(--black);
+        transform: translate(-0.25rem, -0.25rem);
+    }
+
+.btn-accent {
+    background-color: var(--accent);
+}
+
+.btn-danger {
+    background-color: var(--danger);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 300px;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+legend {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+    legend label {
+        cursor: pointer;
+        font-weight: 450;
+    }
+
+fieldset input,
+fieldset textarea,
+fieldset select {
+    padding: 0.75rem 1rem;
+    border: var(--border-1) var(--black);
+    border-radius: var(--border-radius);
+}
+
+    fieldset input::placeholder,
+    fieldset textarea::placeholder,
+    fieldset select::placeholder {
+        color: var(--placeholder);
+    }
+
+    fieldset input:focus,
+    fieldset textarea:focus,
+    fieldset select:focus {
+        border-color: var(--accent);
+        outline: var(--border-1) var(--accent);
+    }
+
+fieldset textarea {
+    resize: none;
+    height: 11.25rem;
+}
+
+fieldset select {
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+fieldset i {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+}
+
+.icon {
+    font-size:1.25rem
+}

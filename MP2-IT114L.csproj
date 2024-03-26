@@ -67,6 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\admin.js" />
+    <Content Include="Styles\clash.css" />
+    <Content Include="Styles\admin.css" />
     <Content Include="App_Data\mystore.mdf" />
     <Content Include="App_Data\mystore_log.ldf">
       <DependentUpon>mystore.mdf</DependentUpon>
@@ -74,6 +77,8 @@
     <Content Include="Admin\Login-Admin.aspx" />
     <Content Include="Client\Login-Client.aspx" />
     <Content Include="Client\Signup-Client.aspx" />
+    <Content Include="Admin\Products.aspx" />
+    <Content Include="Styles\general.css" />
     <Content Include="UserPage-Profile.aspx" />
     <Content Include="Web.config" />
     <Content Include="Index.aspx" />
@@ -123,6 +128,13 @@
     </Compile>
     <Compile Include="App_Code\Records\Record.cs" />
     <Compile Include="App_Code\Records\RecordRepository.cs" />
+    <Compile Include="Admin\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage-Profile.aspx.cs">
       <DependentUpon>UserPage-Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -149,8 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\App_LocalResources\" />
-    <Folder Include="CSS\" />
-    <Folder Include="JS\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
