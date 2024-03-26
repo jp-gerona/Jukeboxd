@@ -33,6 +33,15 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.TextBox TB_RecordName;
 
         /// <summary>
+        /// TB_RecordArtist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TB_RecordArtist;
+
+        /// <summary>
         /// DL_Genre control.
         /// </summary>
         /// <remarks>
@@ -123,12 +132,57 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.Button addToCart;
 
         /// <summary>
-        /// LB_Username control.
+        /// imageRecord control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LB_Username;
+        protected global::System.Web.UI.WebControls.FileUpload imageRecord;
+
+        /// <summary>
+        /// img_RecordId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox img_RecordId;
+
+        /// <summary>
+        /// addImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addImage;
+
+        /// <summary>
+        /// displayRecord control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox displayRecord;
+
+        /// <summary>
+        /// displayImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button displayImage;
+
+        /// <summary>
+        /// productImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image productImage;
     }
 }

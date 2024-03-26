@@ -26,9 +26,6 @@ namespace MP2_IT114L
                 }
                 else
                 {
-                    UserProfile userProfile = new UserProfile();
-                    Session["username"] = userProfile.GetUserName(email);
-
                     Response.Redirect("~/Index.aspx");
                 }
             }

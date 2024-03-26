@@ -67,14 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\admin.js" />
-    <Content Include="Styles\clash.css" />
-    <Content Include="Styles\admin.css" />
+    <Content Include="Admin\Login-Admin.aspx" />
     <Content Include="App_Data\mystore.mdf" />
     <Content Include="App_Data\mystore_log.ldf">
       <DependentUpon>mystore.mdf</DependentUpon>
     </Content>
-    <Content Include="Admin\Login-Admin.aspx" />
     <Content Include="Client\Login-Client.aspx" />
     <Content Include="Client\Signup-Client.aspx" />
     <Content Include="Admin\Products.aspx" />

@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav>
+        <nav>   
             <a href="Index.aspx">Home</a>
             <a href="UserPage-Profile.aspx">Profile</a>
             <a href="CartTable.aspx">Cart</a>
@@ -16,6 +16,8 @@
         <h1>Home Page</h1>
         <div>
             <asp:TextBox ID="TB_RecordName" runat="server" placeholder="Enter Record Name"></asp:TextBox>
+            <br />
+            <asp:TextBox ID="TB_RecordArtist" runat="server" placeholder="Enter Record Artist"></asp:TextBox>
             <br />
             <asp:DropDownList ID="DL_Genre" runat="server">
                 <asp:ListItem Enabled="true" Text="Select Genre" Value="-1"></asp:ListItem>
@@ -45,6 +47,17 @@
             <br />
             <asp:Button ID="addToCart" runat="server" Text="Add To Cart" OnClick="AddToCart_Click" />
             <br />
+            <asp:FileUpload ID="imageRecord" runat="server"/>
+            <br />
+            <asp:TextBox ID="img_RecordId" runat="server" placeholder="Enter Record ID"></asp:TextBox>
+            <br />
+            <asp:Button ID="addImage" runat="server" Text="Add/Update Image to Record" OnClick="AddImage_Click"/>
+            <br />
+            <div>
+                <asp:TextBox ID="displayRecord" runat="server" placeholder="Enter Record ID to Display"></asp:TextBox>
+                <asp:Button ID="displayImage" runat="server" Text="Display" OnClick="DisplayImage_Click"/>
+                <asp:Image ID="productImage" runat="server" Width="50" Height="50" />
+            </div>
 
         </div>
 
