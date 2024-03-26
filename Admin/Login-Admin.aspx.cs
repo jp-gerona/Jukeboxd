@@ -26,7 +26,7 @@ namespace MP2_IT114L
                 }
                 else
                 {
-                    Response.Redirect("Index.aspx");
+                    Response.Redirect("~/Index.aspx");
                 }
             }
             else

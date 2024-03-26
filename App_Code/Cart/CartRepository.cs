@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls.WebParts;
 
 namespace MP2_IT114L
 {
@@ -127,6 +129,11 @@ namespace MP2_IT114L
             using (var command = connection.CreateCommand())
             {
                 connection.Open();
+                command.CommandText = "UPDATE Record " +
+                    "SET Stock = Stock - (SELECT Quantity FROM Cart WHERE Record.Product_ID = Cart.Product_ID) " +
+                    "FROM Record " +
+                    "JOIN Cart ON Record.Product_ID = Cart.Product_ID;";
+                command.ExecuteNonQuery();
                 command.CommandText = "TRUNCATE TABLE Cart";
                 command.ExecuteNonQuery();
             }

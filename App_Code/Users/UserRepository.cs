@@ -34,6 +34,7 @@ namespace MP2_IT114L.App_Code.Users
                 if (type == "Admin")
                 {
                     accountId = GenerateAccountIdAdmin();
+                    command.Parameters.AddWithValue("@Address", "N/A");
                 }
                 else
                 {
