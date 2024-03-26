@@ -130,7 +130,7 @@ table {
     width: 100%;
     min-width: 950px;
     table-layout: auto;
-    border-collapse: seperate;
+    border-collapse: separate;
     border-spacing: 0;
     background-color: var(--white);
     border-top: var(--border-2) var(--black);
@@ -146,7 +146,7 @@ th, td {
 }
 
 th {
-    font-weight: 550;
+    font-weight: 600;
     border-bottom: var(--border-2) var(--black);
 }
 
@@ -164,7 +164,7 @@ td {
     }
 
     td.amount {
-        font-weight: 550;
+        font-weight: 600;
     }
 
     td.action {
