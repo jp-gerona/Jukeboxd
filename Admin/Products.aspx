@@ -95,10 +95,6 @@
                 <p>Copyright &copy; <%: DateTime.Now.Year %> Orbit.</p>
                 <asp:Button ID="ToggleDarkModeButton" runat="server" CssClass="btn btn-accent light-dark-toggle ri-sun-fill" Text='&#xF1BC;' />
             </footer>
-            <%--<footer>
-                <p>Copyright &copy; 2024 Orbit.</p>
-                <button class="btn btn-accent light-dark-toggle"><i class="ri-sun-fill"></i></button>
-            </footer>--%>
         </main>
 
         <script src="../scripts/admin.js"></script>

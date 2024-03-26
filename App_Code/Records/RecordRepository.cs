@@ -19,23 +19,29 @@ namespace MP2_IT114L
             connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         }
         //Gets all the productId in the database
-        public IEnumerable<Record> GetAllProductId()
+        public IEnumerable<Record> GetAllProducts()
         {
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
             {
                 connection.Open();
                 command.CommandText =
-                    "SELECT Record_Name, Product_Id " +
+                    "SELECT * " +
                     "FROM Record " +
-                    "ORDER BY Record_Name DESC";
+                    "ORDER BY Product_Id ASC";
                 return command
                     .ExecuteReader()
                     .Cast<IDataRecord>()
                     .Select(row => new Record()
                     {
                         ProductName = (string)row["Record_Name"],
-                        ProductId = (string)row["Product_Id"]
+                        ProductId = (string)row["Product_Id"],
+                        Artist = (string)row["Artist"],
+                        Genre = (string)row["Genre"],
+                        Price = (decimal)row["Price"],
+                        Stock = (int)row["Stock"],
+                        Description = (string)row["Description"],
+                        
                     })
                     .ToList();
             }

@@ -45,7 +45,7 @@ namespace MP2_IT114L
         protected void Page_Load(object sender, EventArgs e)
         {
             var RecordRepository = new RecordRepository();
-            recordRepository = RecordRepository.GetAllProductId();
+            recordRepository = RecordRepository.GetAllProducts();
             //PostRepeater.DataSource = posts;
             //PostRepeater.DataBind();
         }
