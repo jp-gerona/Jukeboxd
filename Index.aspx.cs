@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Web.ApplicationServices;
 using System.Web.Services.Description;
 
 namespace MP2_IT114L
@@ -44,6 +45,7 @@ namespace MP2_IT114L
             recordRepository = RecordRepository.GetAllProductId();
             //PostRepeater.DataSource = posts;
             //PostRepeater.DataBind();
+            LB_Username.Text = Session["username"].ToString();
         }
     }
 }

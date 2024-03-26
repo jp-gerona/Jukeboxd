@@ -44,6 +44,7 @@ namespace MP2_IT114L.App_Code.Users
                 command.Parameters.AddWithValue("@Name", name);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", password);
+                command.Parameters.AddWithValue("@Address", "nfkjdbfkabsdfkjbsdafj");
                 command.Parameters.AddWithValue("@Type", type);
 
                 command.ExecuteNonQuery();

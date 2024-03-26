@@ -19,6 +19,36 @@ namespace MP2_IT114L.App_Code.Users
         {
             connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         }
+
+        public string GetUserName(string email)
+        {
+            string userName = "";
+
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = connection.CreateCommand())
+            {
+                connection.Open();
+                command.CommandText =
+                    "SELECT Name FROM Account WHERE Email = @Email";
+
+                command.Parameters.AddWithValue("@Email", email);
+
+
+
+                object result = command.ExecuteScalar();
+
+                // Check if the result is not null and cast it to string
+                if (result != null)
+                {
+                    userName = result.ToString();
+                }
+
+                connection.Close();
+            }
+
+            return userName;
+        }
+
         public User GetUserProfile(int accountId)
         {
             User userProfile = new User();

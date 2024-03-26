@@ -46,6 +46,8 @@
             <asp:Button ID="addToCart" runat="server" Text="Add To Cart" OnClick="AddToCart_Click" />
             <br />
 
+            <asp:Label ID="LB_Username" runat="server" Text=""></asp:Label>
+
         </div>
 
         <div>
