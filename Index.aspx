@@ -59,6 +59,8 @@
                 <asp:Image ID="productImage" runat="server" Width="50" Height="50" />
             </div>
 
+            <asp:Label ID="LB_Username" runat="server" Text=""></asp:Label>
+
         </div>
 
         <div>
