@@ -1,18 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="MP2_IT114L.Records" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Orders.aspx.cs" Inherits="MP2_IT114L.Admin.Orders" %>
 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../images/logo/Jukeboxd-favicon.png" type="image/x-icon" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo/Jukeboxd-favicon.png" type="image/x-icon">
     <title>Jukeboxd</title>
 
-    <link rel="stylesheet" type="text/css" href="~/Styles/general.css" />
-    <link rel="stylesheet" type="text/css" href="~/Styles/admin.css" />
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/admin.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
-
 </head>
 <body>
     <form runat="server">
@@ -28,12 +26,12 @@
                         </div>
                     </asp:HyperLink>
                     <asp:HyperLink ID="ProductsLink" runat="server" NavigateUrl="./products.aspx">
-                        <div class="nav-link active">
+                        <div class="nav-link">
                             <i class="ri-store-2-fill"></i>Products
                         </div>
                     </asp:HyperLink>
                     <asp:HyperLink ID="OrdersLink" runat="server" NavigateUrl="./orders.aspx">
-                        <div class="nav-link">
+                        <div class="nav-link active">
                             <i class="ri-money-dollar-circle-fill"></i>Orders
                         </div>
                     </asp:HyperLink>
@@ -61,7 +59,7 @@
                 <asp:Image ID="TopbarLogo" runat="server" ImageUrl="../../images/logo/Jukeboxd-logo.svg" AlternateText="Topbar Logo" />
             </div>
 
-            <h3>Products</h3>
+            <h3>Orders</h3>
 
             <div class="hamburger">
                 <div class="ham-icon" onclick="toggleMenu()"><i class="ri-menu-fill"></i></div>
@@ -71,10 +69,10 @@
                     <div class="nav-link"><i class="ri-dashboard-2-fill"></i>Dashboard</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="./products.aspx">
-                    <div class="nav-link active"><i class="ri-store-2-fill"></i>Products</div>
+                    <div class="nav-link"><i class="ri-store-2-fill"></i>Products</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="./orders.aspx">
-                    <div class="nav-link"><i class="ri-money-dollar-circle-fill"></i>Orders</div>
+                    <div class="nav-link active"><i class="ri-money-dollar-circle-fill"></i>Orders</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="./users.aspx">
                     <div class="nav-link"><i class="ri-user-fill"></i>Users</div>
@@ -91,47 +89,49 @@
         </nav>
 
         <main>
-
             <header>
-                <h3>Products</h3>
+                <h3>Orders</h3>
                 <div class="actions">
-                    <asp:Button ID="btnSearch" runat="server" CssClass="btn icon ri-search-line" Text="&#xF0D1;" />
-                    <asp:HyperLink ID="lnkNewProduct" runat="server" NavigateUrl="./New-Product.aspx" CssClass="btn btn-accent asp-add-product">
-                        New Product
-                    </asp:HyperLink>
+                    <button class="btn asp-search-popover"><i class="ri-search-line"></i></button>
                 </div>
             </header>
-
             <section class="products-section">
                 <div class="table-container">
-                    <asp:Table ID="MyTable" runat="server" CssClass="asp-records-table">
+                    <asp:Table ID="AspNetTable" CssClass="asp-records-table" runat="server">
                         <asp:TableHeaderRow>
-                            <asp:TableHeaderCell>Prod. ID</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Title</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Artist</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Genre</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Stock</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Price</asp:TableHeaderCell>
-                            <asp:TableHeaderCell></asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Date</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Product</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Acct. ID</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Qty.</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Subtotal</asp:TableHeaderCell>
                         </asp:TableHeaderRow>
+                        <asp:TableRow>
+                            <asp:TableCell>March 26, 2024</asp:TableCell>
+                            <asp:TableCell>
+                                <asp:Image ID="ProductImage" runat="server" ImageUrl="https://cdn.discordapp.com/attachments/654336177226252288/1222586091601793145/1950867a87ff6c2199b1917e42e34067.png?ex=6616c106&is=66044c06&hm=abf927c280c6e24b14570a9ba56abebad27186896760c4b610e44c4d4118d504&" />
+                                Super Real Me
+                            </asp:TableCell>
+                            <asp:TableCell>C00000001</asp:TableCell>
+                            <asp:TableCell>2</asp:TableCell>
+                            <asp:TableCell CssClass="amount">&#8369; 4998.00</asp:TableCell>
+                        </asp:TableRow>
                     </asp:Table>
                 </div>
 
                 <div class="pagination">
-                    <asp:Button ID="PrevButton" runat="server" CssClass="btn asp-prev ri-arrow-left-s-line" Text='&#xEA64; Prev' Enabled="false" />
-                    <span class="asp-page-info" runat="server">Page 1 of 10</span>
-                    <asp:Button ID="NextButton" runat="server" CssClass="btn asp-next ri-arrow-right-s-line" Text='&#xEA6E; Next' />
+                    <button disabled class="btn asp-prev"><i class="ri-arrow-left-s-line"></i>Prev</button>
+                    <span class="asp-page-info">Page 1 of 1</span>
+                    <button disabled class="btn asp-next"><i class="ri-arrow-right-s-line"></i>Next</button>
                 </div>
             </section>
 
             <footer>
-                <p>Copyright &copy; <%: DateTime.Now.Year %> Orbit.</p>
-                <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" ClientIDMode="Static" type="button" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
+                <p>Copyright &copy; 2024 Orbit.</p>
+                <button class="btn btn-accent light-dark-toggle"><i class="ri-sun-fill"></i></button>
             </footer>
         </main>
-
-        <script src="../scripts/admin.js"></script>
-        <script src="../scripts/theme.js"></script>
     </form>
+
+    <script src="../scripts/admin.js"></script>
 </body>
 </html>
