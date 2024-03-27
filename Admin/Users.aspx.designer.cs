@@ -15,6 +15,24 @@ namespace MP2_IT114L.Admin
     {
 
         /// <summary>
+        /// siteLogoLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink siteLogoLink;
+
+        /// <summary>
+        /// siteLogoImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image siteLogoImage;
+
+        /// <summary>
         /// DashboardLink control.
         /// </summary>
         /// <remarks>

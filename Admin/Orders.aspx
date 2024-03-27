@@ -3,23 +3,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../images/logo/Jukeboxd-favicon.png" type="image/x-icon">
-  <title>Jukeboxd</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo/Jukeboxd-favicon.png" type="image/x-icon">
+    <title>Jukeboxd</title>
 
-  <link rel="preload" href="../fonts/clash-display/WEB/fonts/ClashDisplay-Variable.woff2" as="font" type="font/woff2" crossorigin>
-
-  <link rel="stylesheet" href="../styles/general.css">
-  <link rel="stylesheet" href="../styles/admin.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
         <nav class="sidebar">
-            <a href="../index.html" class="site-logo">
-                <h2>Jukeboxd</h2>
-            </a>
+            <asp:HyperLink ID="siteLogoLink" runat="server" NavigateUrl="../customer/index.html" CssClass="site-logo">
+                <asp:Image ID="siteLogoImage" runat="server" ImageUrl="../images/logo/Jukeboxd-nav.svg" AlternateText="Sidebar Logo" />
+            </asp:HyperLink>
             <div class="nav-links">
                 <div>
                     <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="./dashboard.aspx">
@@ -90,50 +88,50 @@
             </div>
         </nav>
 
-    <main>
-      <header>
-        <h3>Orders</h3>
-        <div class="actions">
-          <button class="btn asp-search-popover"><i class="ri-search-line"></i></button>
-        </div>
-      </header>
-      <section class="products-section">
-        <div class="table-container">
-          <asp:Table ID="AspNetTable" CssClass="asp-records-table" runat="server">
-            <asp:TableHeaderRow>
-              <asp:TableHeaderCell>Date</asp:TableHeaderCell>
-              <asp:TableHeaderCell>Product</asp:TableHeaderCell>
-              <asp:TableHeaderCell>Acct. ID</asp:TableHeaderCell>
-              <asp:TableHeaderCell>Qty.</asp:TableHeaderCell>
-              <asp:TableHeaderCell>Subtotal</asp:TableHeaderCell>
-            </asp:TableHeaderRow>
-            <asp:TableRow>
-              <asp:TableCell>March 26, 2024</asp:TableCell>
-              <asp:TableCell>
-                <asp:Image ID="ProductImage" runat="server" ImageUrl="../images/vinyls/thriller-michaeljackson.png" />
-                Thriller
-              </asp:TableCell>
-              <asp:TableCell>C00000001</asp:TableCell>
-              <asp:TableCell>2</asp:TableCell>
-              <asp:TableCell CssClass="amount">&#8369; 4998.00</asp:TableCell>
-            </asp:TableRow>
-          </asp:Table>
-        </div>
+        <main>
+            <header>
+                <h3>Orders</h3>
+                <div class="actions">
+                    <button class="btn asp-search-popover"><i class="ri-search-line"></i></button>
+                </div>
+            </header>
+            <section class="products-section">
+                <div class="table-container">
+                    <asp:Table ID="AspNetTable" CssClass="asp-records-table" runat="server">
+                        <asp:TableHeaderRow>
+                            <asp:TableHeaderCell>Date</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Product</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Acct. ID</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Qty.</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Subtotal</asp:TableHeaderCell>
+                        </asp:TableHeaderRow>
+                        <asp:TableRow>
+                            <asp:TableCell>March 26, 2024</asp:TableCell>
+                            <asp:TableCell>
+                                <asp:Image ID="ProductImage" runat="server" ImageUrl="https://cdn.discordapp.com/attachments/654336177226252288/1222586091601793145/1950867a87ff6c2199b1917e42e34067.png?ex=6616c106&is=66044c06&hm=abf927c280c6e24b14570a9ba56abebad27186896760c4b610e44c4d4118d504&" />
+                                Super Real Me
+                            </asp:TableCell>
+                            <asp:TableCell>C00000001</asp:TableCell>
+                            <asp:TableCell>2</asp:TableCell>
+                            <asp:TableCell CssClass="amount">&#8369; 4998.00</asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
+                </div>
 
-        <div class="pagination">
-          <button disabled class="btn asp-prev"><i class="ri-arrow-left-s-line"></i>Prev</button>
-          <span class="asp-page-info">Page 1 of 1</span>
-          <button disabled class="btn asp-next"><i class="ri-arrow-right-s-line"></i>Next</button>
-        </div>
-      </section>
+                <div class="pagination">
+                    <button disabled class="btn asp-prev"><i class="ri-arrow-left-s-line"></i>Prev</button>
+                    <span class="asp-page-info">Page 1 of 1</span>
+                    <button disabled class="btn asp-next"><i class="ri-arrow-right-s-line"></i>Next</button>
+                </div>
+            </section>
 
-      <footer>
-        <p>Copyright &copy; 2024 Orbit.</p>
-        <button class="btn btn-accent light-dark-toggle"><i class="ri-sun-fill"></i></button>
-      </footer>
-    </main>
-  </form>
-  
-  <script src="../scripts/admin.js"></script>
+            <footer>
+                <p>Copyright &copy; 2024 Orbit.</p>
+                <button class="btn btn-accent light-dark-toggle"><i class="ri-sun-fill"></i></button>
+            </footer>
+        </main>
+    </form>
+
+    <script src="../scripts/admin.js"></script>
 </body>
 </html>
