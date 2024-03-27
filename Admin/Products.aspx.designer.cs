@@ -168,13 +168,13 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.HyperLink lnkNewProduct;
 
         /// <summary>
-        /// MyTable control.
+        /// T_Products control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table MyTable;
+        protected global::System.Web.UI.WebControls.Table T_Products;
 
         /// <summary>
         /// PrevButton control.

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Services.Description;
@@ -94,6 +95,30 @@ namespace MP2_IT114L.App_Code.Users
                 }
             }
             return userExists;
+        }
+
+        public IEnumerable<User> GetAllUsers()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = connection.CreateCommand())
+            {
+                connection.Open();
+                command.CommandText =
+                    "SELECT * " +
+                    "FROM Account " +
+                    "ORDER BY Account_Id ASC";
+                return command
+                    .ExecuteReader()
+                    .Cast<IDataRecord>()
+                    .Select(row => new User()
+                    {
+                        AccountId = (string)row["Account_Id"],
+                        Name = (string)row["Name"],
+                        Email = (string)row["Email"],
+                        Address = (string)row["Address"],
+                    })
+                    .ToList();
+            }
         }
 
         private string GenerateAccountIdAdmin()

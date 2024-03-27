@@ -22,10 +22,10 @@ namespace MP2_IT114L
                 IEnumerable<Record> dt = RecordRepository.GetAllProducts();
 
                 // Populate the table with data
-                PopulateTable(dt);
+                PopulateTableProducts(dt);
         }
 
-        private void PopulateTable(IEnumerable<Record> dt)
+        private void PopulateTableProducts(IEnumerable<Record> dt)
         {
             foreach (var record in dt)
             {
@@ -81,7 +81,7 @@ namespace MP2_IT114L
                 row.Cells.Add(buttonCell);
 
                 // Add the row to the table
-                MyTable.Rows.Add(row);
+                T_Products.Rows.Add(row);
             }
         }
     }

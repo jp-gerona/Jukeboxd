@@ -104,7 +104,7 @@
 
             <section class="products-section">
                 <div class="table-container">
-                    <asp:Table ID="MyTable" runat="server" CssClass="asp-records-table">
+                    <asp:Table ID="T_Products" runat="server" CssClass="asp-records-table">
                         <asp:TableHeaderRow>
                             <asp:TableHeaderCell>Prod. ID</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Title</asp:TableHeaderCell>

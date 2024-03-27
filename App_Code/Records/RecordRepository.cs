@@ -24,7 +24,7 @@ namespace MP2_IT114L
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
             {
-                    connection.Open();
+                connection.Open();
                 command.CommandText =
                     "SELECT * " +
                     "FROM Record " +

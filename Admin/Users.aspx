@@ -96,27 +96,21 @@
             </header>
             <section class="products-section">
                 <div class="table-container">
-                    <asp:Table ID="AspNetTable" CssClass="asp-records-table" runat="server">
+                    <asp:Table ID="T_Users" CssClass="asp-records-table" runat="server">
                         <asp:TableHeaderRow>
                             <asp:TableHeaderCell>Acct. ID</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Username</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Email</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Address</asp:TableHeaderCell>
                         </asp:TableHeaderRow>
-                        <asp:TableRow>
-                            <asp:TableCell>C00000001</asp:TableCell>
-                            <asp:TableCell>Lebron_James</asp:TableCell>
-                            <asp:TableCell>lebronjames@gmail.com</asp:TableCell>
-                            <asp:TableCell>Los Angeles, CA</asp:TableCell>
-                        </asp:TableRow>
                     </asp:Table>
                 </div>
 
 
                 <div class="pagination">
-                    <button disabled class="btn asp-prev"><i class="ri-arrow-left-s-line"></i>Prev</button>
-                    <span class="asp-page-info">Page 1 of 1</span>
-                    <button disabled class="btn asp-next"><i class="ri-arrow-right-s-line"></i>Next</button>
+                    <asp:Button ID="PrevButton" runat="server" CssClass="btn asp-prev ri-arrow-left-s-line" Text='&#xEA64; Prev' Enabled="false" />
+                    <span class="asp-page-info" runat="server">Page 1 of 10</span>
+                    <asp:Button ID="NextButton" runat="server" CssClass="btn asp-next ri-arrow-right-s-line" Text='&#xEA6E; Next' />
                 </div>
             </section>
 
