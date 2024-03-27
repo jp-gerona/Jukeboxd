@@ -71,6 +71,7 @@ namespace MP2_IT114L
                 row.Cells.Add(priceCell);
 
                 var deleteButton = new Button();
+                deleteButton.ID = "Btn_" + record.ProductName;
                 deleteButton.Text = "Delete";
                 deleteButton.CssClass = "btn btn-danger asp-delete-button";
                 deleteButton.Click += (sender, e) => {
