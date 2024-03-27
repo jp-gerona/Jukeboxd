@@ -69,10 +69,10 @@
                     <div class="nav-link"><i class="ri-dashboard-2-fill"></i>Dashboard</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="./products.aspx">
-                    <div class="nav-link active"><i class="ri-store-2-fill"></i>Products</div>
+                    <div class="nav-link"><i class="ri-store-2-fill"></i>Products</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="./orders.aspx">
-                    <div class="nav-link"><i class="ri-money-dollar-circle-fill"></i>Orders</div>
+                    <div class="nav-link active"><i class="ri-money-dollar-circle-fill"></i>Orders</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="./users.aspx">
                     <div class="nav-link"><i class="ri-user-fill"></i>Users</div>

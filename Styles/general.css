@@ -135,6 +135,12 @@ fieldset {
     border: none;
 }
 
+fieldset span{
+    position: absolute;
+    bottom: -50%;
+    color: var(--danger);
+}
+
 legend {
     width: 100%;
     display: flex;

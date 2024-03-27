@@ -25,12 +25,17 @@
                 </header>
                 <h2>Log in</h2>
                 <div>
-                    <asp:TextBox ID="TB_email" runat="server" placeholder="Enter email" Required="true" AutoCompleteType="Email" CssClass="input-field" />
-                    <br />
-                    <asp:TextBox ID="TB_password" runat="server" TextMode="Password" placeholder="Enter password" Required="true" CssClass="input-field" />
-                    <br />
-                    <asp:Button ID="LogAccount" runat="server" Text="Login" OnClientClick="return validateForm()" OnClick="LogAccount_Click" CssClass="btn btn-primary" />
-                    <br />
+                    <fieldset>
+                        <legend><label for="TB_email">Email</label></legend>
+                        <asp:TextBox ID="TB_email" runat="server" placeholder="Enter email" Required="true" AutoCompleteType="Email" CssClass="input-field" /> 
+                    </fieldset>
+                    <fieldset>
+                        <legend><label for="TB_password">Password</label></legend>
+                        <asp:TextBox ID="TB_password" runat="server" TextMode="Password" placeholder="Enter password" Required="true" CssClass="input-field" /> 
+                    </fieldset>  
+                    <fieldset>
+                        <asp:Button ID="LogAccount" runat="server" Text="Login" OnClientClick="return validateForm()" OnClick="LogAccount_Click" CssClass="btn btn-primary" /> 
+                    </fieldset>                    
                     <a href="./home.html"><i class="ri-arrow-left-line"></i>Go back to homepage</a>
                 </div>
             </div>

@@ -64,22 +64,22 @@
                 <div class="ham-icon" onclick="toggleMenu()"><i class="ri-menu-fill"></i></div>
                 <div class="nav-links">
                     <div>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="./dashboard.html">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="./dashboard.aspx">
                     <div class="nav-link"><i class="ri-dashboard-2-fill"></i>Dashboard</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="./products.aspx">
                     <div class="nav-link active"><i class="ri-store-2-fill"></i>Products</div>
                         </asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="./orders.html">
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="./orders.aspx">
                     <div class="nav-link"><i class="ri-money-dollar-circle-fill"></i>Orders</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="./users.aspx">
                     <div class="nav-link"><i class="ri-user-fill"></i>Users</div>
                         </asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="./analytics.html">
+                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="./analytics.aspx">
                     <div class="nav-link"><i class="ri-bar-chart-fill"></i>Analytics</div>
                         </asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="../index.html">
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="../index.aspx">
                     <div class="nav-link"><i class="ri-logout-box-line"></i>Logout</div>
                         </asp:HyperLink>
                     </div>
