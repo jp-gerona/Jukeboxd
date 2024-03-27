@@ -41,8 +41,8 @@ namespace MP2_IT114L
                         Price = (decimal)row["Price"],
                         Stock = (int)row["Stock"],
                         Description = (string)row["Description"],
-                        
-                    })
+                        Record_Image = row["Record_Image"] != DBNull.Value ? (byte[])row["Record_Image"] : new byte[] { 0 }
+            })
                     .ToList();
             }
         }
