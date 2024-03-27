@@ -14,9 +14,9 @@
 <body>
     <form runat="server">
         <nav class="sidebar">
-            <a href="../index.html" class="site-logo">
-                <h2>Jukeboxd</h2>
-            </a>
+            <asp:HyperLink ID="siteLogoLink" runat="server" NavigateUrl="../customer/index.html" CssClass="site-logo">
+                <asp:Image ID="siteLogoImage" runat="server" ImageUrl="../images/logo/Jukeboxd-nav.svg" AlternateText="Sidebar Logo" />
+            </asp:HyperLink>
             <div class="nav-links">
                 <div>
                     <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="./dashboard.html">
