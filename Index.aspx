@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <nav>   
-            <a href="Index.aspx">Home</a>
+            <a href="Admin/Products.aspx">Home</a>
             <a href="UserPage-Profile.aspx">Profile</a>
             <a href="CartTable.aspx">Cart</a>
         </nav>

@@ -54,7 +54,7 @@
         <asp:TextBox ID="TB_username" runat="server" placeholder="Enter username"></asp:TextBox> <span id="errorUsername" style="color: red;"></span><br />
         <asp:TextBox ID="TB_email" runat="server" placeholder="Enter email"></asp:TextBox> <span id="errorEmail" style="color: red;"></span><br />
         <asp:TextBox ID="TB_password" textmode="Password" runat="server" placeholder="Enter password"></asp:TextBox> <span id="errorPassword" style="color: red;"></span><br />
-        <asp:TextBox ID="TB_password2" textmode="Password" runat="server" placeholder="Renter password"></asp:TextBox> <span id="errorPassword2" style="color: red;"></span><br />
+        <asp:TextBox ID="TB_password2" textmode="Password" runat="server" placeholder="Re-enter password"></asp:TextBox> <span id="errorPassword2" style="color: red;"></span><br />
         <asp:Button ID="CreateAccount" runat="server" Text="Create Account" OnClientClick="return validateForm()" OnClick="CreateAccount_Click" /> <br />        
         <asp:Label ID="LblAccountId" runat="server" Text=""></asp:Label>
 

@@ -93,7 +93,7 @@
                 <h3>Products</h3>
                 <div class="actions">
                     <asp:Button ID="btnSearch" runat="server" CssClass="btn icon ri-search-line" Text="&#xF0D1;" />
-                    <asp:HyperLink ID="lnkNewProduct" runat="server" NavigateUrl="~/Products/New.aspx" CssClass="btn btn-accent asp-add-product">
+                    <asp:HyperLink ID="lnkNewProduct" runat="server" NavigateUrl="~/Index.aspx" CssClass="btn btn-accent asp-add-product">
                     New Product
                     </asp:HyperLink>
                 </div>
