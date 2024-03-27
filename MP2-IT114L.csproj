@@ -75,6 +75,9 @@
     <Content Include="Client\Login-Client.aspx" />
     <Content Include="Client\Signup-Client.aspx" />
     <Content Include="Admin\Products.aspx" />
+    <Content Include="Scripts\admin.js" />
+    <Content Include="Styles\admin.css" />
+    <Content Include="Styles\clash.css" />
     <Content Include="Styles\general.css" />
     <Content Include="UserPage-Profile.aspx" />
     <Content Include="Web.config" />
