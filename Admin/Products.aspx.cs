@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Caching;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -35,8 +36,23 @@ namespace MP2_IT114L
                 // For inserting the image and title to the row
                 TableCell imageAndTextCell = new TableCell();
                 Image imageControl = new Image(); // For the image of the Product
-                imageControl.ImageUrl = "../images/vinyls/default.jpg";
-                imageControl.AlternateText = "default.jpg";
+                // If statement to know if record.Record_Image is null or not
+                if (record.Record_Image != null && record.Record_Image.All(b => b == 0))
+                {
+                    imageControl.ImageUrl = "../images/vinyls/default.jpg";
+                    imageControl.AlternateText = "default.jpg";
+                }
+                else
+                {
+                    byte[] imageData = record.Record_Image;
+                    string base64String = Convert.ToBase64String(imageData);
+                    imageControl.ImageUrl = "data:image/jpeg;base64," + base64String;
+                    //string imageString = record.Record_Image;
+                    //byte[] imageData = Convert.FromBase64String(imageString);
+                    //string base64String = Convert.ToBase64String(imageData);
+                    //imageControl.ImageUrl = "data:image/jpeg;base64," + base64String;
+                    //imageControl.AlternateText = record.Record_Image + ".jpg";
+                }
                 LiteralControl textLiteral = new LiteralControl(); // For the title of the product
                 textLiteral.Text = record.ProductName;
                 // Adds both the image and text to the cell
@@ -44,7 +60,7 @@ namespace MP2_IT114L
                 imageAndTextCell.Controls.Add(textLiteral);
                 row.Cells.Add(imageAndTextCell);
 
-                row.Cells.Add(new TableCell { Text = record.Artist });
+                row.Cells.Add(new TableCell { Text = record.Artist});
                 row.Cells.Add(new TableCell { Text = record.Genre });
                 row.Cells.Add(new TableCell { Text = record.Stock.ToString() });
 
