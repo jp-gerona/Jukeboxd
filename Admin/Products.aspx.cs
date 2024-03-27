@@ -12,15 +12,12 @@ namespace MP2_IT114L
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
                 // Fetch data from the database for the current page
                 var RecordRepository = new RecordRepository();
                 IEnumerable<Record> dt = RecordRepository.GetAllProducts();
 
                 // Populate the table with data
                 PopulateTable(dt);
-            }
 
 
         }
@@ -34,10 +31,13 @@ namespace MP2_IT114L
 
                 // Add cells to the row
                 row.Cells.Add(new TableCell { Text = record.ProductId });
+                row.Cells.Add(new TableCell { Text = record.ProductName });
                 row.Cells.Add(new TableCell { Text = record.Artist });
                 row.Cells.Add(new TableCell { Text = record.Genre });
-                row.Cells.Add(new TableCell { Text = record.Price.ToString() });
                 row.Cells.Add(new TableCell { Text = record.Stock.ToString() });
+                TableCell priceCell = new TableCell();
+                priceCell.Text = "&#8369; " + record.Price.ToString("N2"); // Using record.Price directly
+                row.Cells.Add(priceCell);
 
                 var deleteButton = new Button();
                 deleteButton.Text = "Delete";
