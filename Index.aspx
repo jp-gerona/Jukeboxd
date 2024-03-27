@@ -31,9 +31,9 @@
             <br />
             <asp:TextBox ID="TB_Stock" runat="server" placeholder="Enter Stock"></asp:TextBox>
             <br />
-            <asp:TextBox ID="TB_Description" runat="server" placeholder="Enter Description"></asp:TextBox>
+            <%--<asp:TextBox ID="TB_Description" runat="server" placeholder="Enter Description"></asp:TextBox>--%>
             <br />
-            <asp:Button ID="addRecord" runat="server" Text="Add Record" OnClick="AddRecord_Click" />
+            <%--<asp:Button ID="addRecord" runat="server" Text="Add Record" OnClick="AddRecord_Click" />--%>
             <br />
 
             <asp:TextBox ID="TB_DEL_RecordName" runat="server" placeholder="Enter Record Name to Delete"></asp:TextBox>

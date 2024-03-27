@@ -69,24 +69,6 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.TextBox TB_Stock;
 
         /// <summary>
-        /// TB_Description control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB_Description;
-
-        /// <summary>
-        /// addRecord control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addRecord;
-
-        /// <summary>
         /// TB_DEL_RecordName control.
         /// </summary>
         /// <remarks>

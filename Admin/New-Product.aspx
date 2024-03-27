@@ -16,7 +16,7 @@
 <body>
     <form runat="server">
         <nav class="sidebar">
-            <asp:HyperLink ID="siteLogoLink" runat="server" NavigateUrl="../customer/index.html" CssClass="site-logo">
+            <asp:HyperLink ID="siteLogoLink" runat="server" NavigateUrl="./Dashboard.aspx" CssClass="site-logo">
                 <asp:Image ID="siteLogoImage" runat="server" ImageUrl="../images/logo/Jukeboxd-nav.svg" AlternateText="Sidebar Logo" />
             </asp:HyperLink>
             <div class="nav-links">
@@ -107,59 +107,62 @@
                 <asp:Panel ID="form_add_product" runat="server">
                     <fieldset>
                         <legend>
-                            <asp:Label AssociatedControlID="txtRecordName" Text="Title" runat="server" />
+                            <asp:Label AssociatedControlID="TB_RecordName" Text="Title" runat="server" />
                         </legend>
-                        <asp:TextBox ID="txtRecordName" runat="server" />
-                        <%--<input type="text" placeholder="Name of vinyl record" id="record_name" />--%>
+                        <asp:TextBox ID="TB_RecordName" runat="server" placeholder="Name of vinyl record" />
                     </fieldset>
 
                     <fieldset>
                         <legend>
-                            <label for="Artist">Artist</label></legend>
-                        <input type="text" placeholder="Artist of vinyl record" id="Artist" />
+                            <asp:Label AssociatedControlID="TB_Artist" Text="Artist" runat="server" />
+                        </legend>
+                        <asp:TextBox ID="TB_Artist" runat="server" placeholder="Artist of vinyl record" />
                     </fieldset>
 
                     <fieldset>
                         <legend>
-                            <label for="imageUpload">Upload image of Vinyl Record</label></legend>
-                        <input class="image-upload" type="file" id="imageUpload" name="imageUpload" accept="image/*" />
+                            <asp:Label AssociatedControlID="FU_Image" Text="Upload image of Vinyl Record" runat="server" />
+                        </legend>
+                        <asp:FileUpload ID="FU_Image" CssClass="image-upload" runat="server" Accept=".png,.jpg" />
                     </fieldset>
 
                     <fieldset class="genre-select">
                         <legend>
-                            <label for="Genre">Genre</label></legend>
-                        <select id="Genre">
-                            <option value="" selected>Choose genre of vinyl record</option>
-                            <option value="Disco">Disco</option>
-                            <option value="Hip-hop">Hip-hop</option>
-                            <option value="Pop">Pop</option>
-                            <option value="RnB">RnB</option>
-                            <option value="Rock">Rock</option>
-                            <option value="Jazz">Jazz</option>
-                        </select>
+                            <asp:Label AssociatedControlID="DDL_Genre" Text="Genre" runat="server" />
+                        </legend>
+                        <asp:DropDownList ID="DDL_Genre" runat="server">
+                            <asp:ListItem Disabled="true" Selected="true" Text="Choose genre of vinyl record" Value="-1"></asp:ListItem>
+                            <asp:ListItem Text="Rock" Value="1"></asp:ListItem>
+                            <asp:ListItem Text="Pop" Value="2"></asp:ListItem>
+                            <asp:ListItem Text="RNB" Value="3"></asp:ListItem>
+                            <asp:ListItem Text="Jazz" Value="4"></asp:ListItem>
+                        </asp:DropDownList>
                         <i class="ri-arrow-drop-down-line"></i>
                     </fieldset>
 
                     <fieldset>
                         <legend>
-                            <label for="Price">Price</label></legend>
-                        <input type="text" placeholder="Price of vinyl record (PHP)" id="Price" />
+                            <asp:Label AssociatedControlID="TB_Price" Text="Price" runat="server" />
+                        </legend>
+                        <asp:TextBox ID="TB_Price" runat="server" placeholder="Price of vinyl record (PHP)" />
                     </fieldset>
 
                     <fieldset>
                         <legend>
-                            <label for="Stock">Stock</label></legend>
-                        <input type="text" placeholder="Stock of vinyl record" id="Stock" />
+                            <asp:Label AssociatedControlID="TB_Stock" Text="Stock" runat="server" />
+                        </legend>
+                        <asp:TextBox ID="TB_Stock" runat="server" placeholder="Stock of vinyl record" />
                     </fieldset>
 
                     <fieldset>
                         <legend>
-                            <label for="Description">Description</label></legend>
-                        <textarea type="text" placeholder="Detailed description of vinyl record, including the media condition, jacket condition and tracklist." id="Description"></textarea>
+                            <asp:Label AssociatedControlID="TB_Description" Text="Description" runat="server" />
+                        </legend>
+                        <asp:TextBox ID="TB_Description" runat="server" placeholder="Detailed description of vinyl record, including the media condition, jacket condition and tracklist." />
                     </fieldset>
 
                     <div class="submit-container">
-                        <button type="submit" class="btn btn-primary" id="submit_add_product">Create Product</button>
+                        <asp:Button ID="submit_add_product" runat="server" type="submit" CssClass="btn btn-primary" Text="Create Product" onclick="AddRecord_Click" />
                     </div>
 
                 </asp:Panel>
@@ -168,7 +171,9 @@
 
             <footer>
                 <p>Copyright &copy; <%: DateTime.Now.Year %> Orbit.</p>
-                <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" ClientIDMode="Static" type="button" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
+                <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
+                <%--type="button"--%>
+                <%--ClientIDMode="Static"--%>
             </footer>
         </main>
 

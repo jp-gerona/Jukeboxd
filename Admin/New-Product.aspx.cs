@@ -11,7 +11,25 @@ namespace MP2_IT114L
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoggedInUserEmail"] == null)
+            {
+                Response.Redirect("./Login-Admin.aspx");
+            }
+        }
 
+        public void AddRecord_Click(object sender, EventArgs e)
+        {
+            string recordName = TB_RecordName.Text;
+            string recordArtist = TB_Artist.Text;
+            byte[] recordImage = new byte[FU_Image.PostedFile.ContentLength];
+            FU_Image.PostedFile.InputStream.Read(recordImage, 0, FU_Image.PostedFile.ContentLength);
+            string genre = DDL_Genre.SelectedItem.Text;
+            float price = int.Parse(TB_Price.Text);
+            int stock = int.Parse(TB_Stock.Text);
+            string description = TB_Description.Text;
+
+            var RecordRepository = new RecordRepository();
+            RecordRepository.AddRecord(recordName, recordArtist, recordImage, genre, price, stock, description);
         }
     }
 }

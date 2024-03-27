@@ -15,7 +15,7 @@
 <body>
     <form runat="server">
         <nav class="sidebar">
-            <asp:HyperLink ID="siteLogoLink" runat="server" NavigateUrl="../customer/index.html" CssClass="site-logo">
+            <asp:HyperLink ID="siteLogoLink" runat="server" NavigateUrl="./Dashboard.aspx" CssClass="site-logo">
                 <asp:Image ID="siteLogoImage" runat="server" ImageUrl="../images/logo/Jukeboxd-nav.svg" AlternateText="Sidebar Logo" />
             </asp:HyperLink>
             <div class="nav-links">
@@ -127,11 +127,12 @@
 
             <footer>
                 <p>Copyright &copy; 2024 Orbit.</p>
-                <button class="btn btn-accent light-dark-toggle"><i class="ri-sun-fill"></i></button>
+                <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" ClientIDMode="Static" type="button" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
             </footer>
         </main>
-    </form>
 
-    <script src="../scripts/admin.js"></script>
+        <script src="../scripts/admin.js"></script>
+        <script src="../scripts/theme.js"></script>
+    </form>
 </body>
 </html>

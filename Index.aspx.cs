@@ -38,18 +38,18 @@ namespace MP2_IT114L
                 Response.Write("Error: User email not found in session.");
             }
         }
-        public void AddRecord_Click(object sender, EventArgs e)
-        {
-            string recordName = TB_RecordName.Text;
-            string recordArtist = TB_RecordArtist.Text;
-            string genre = DL_Genre.SelectedItem.Text;
-            float price = int.Parse(TB_Price.Text);
-            int stock = int.Parse(TB_Stock.Text);
-            string description = TB_Description.Text;
+        //public void AddRecord_Click(object sender, EventArgs e)
+        //{
+        //    string recordName = TB_RecordName.Text;
+        //    string recordArtist = TB_RecordArtist.Text;
+        //    string genre = DL_Genre.SelectedItem.Text;
+        //    float price = int.Parse(TB_Price.Text);
+        //    int stock = int.Parse(TB_Stock.Text);
+        //    string description = TB_Description.Text;
 
-            var RecordRepository = new RecordRepository();
-            RecordRepository.AddRecord(recordName, recordArtist, genre, price, stock, description);
-        }
+        //    var RecordRepository = new RecordRepository();
+        //    RecordRepository.AddRecord(recordName, recordArtist, genre, price, stock, description);
+        //}
 
         public void DeleteRecord_Click(Object sender, EventArgs e)
         {

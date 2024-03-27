@@ -11,7 +11,10 @@ namespace MP2_IT114L
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["LoggedInUserEmail"] == null)
+            {
+                Response.Redirect("./Login-Admin.aspx");
+            }
         }
     }
 }

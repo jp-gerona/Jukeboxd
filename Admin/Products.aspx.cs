@@ -13,14 +13,16 @@ namespace MP2_IT114L
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoggedInUserEmail"] == null)
+            {
+                Response.Redirect("./Login-Admin.aspx");
+            }
             // Fetch data from the database for the current page
             var RecordRepository = new RecordRepository();
                 IEnumerable<Record> dt = RecordRepository.GetAllProducts();
 
                 // Populate the table with data
                 PopulateTable(dt);
-
-
         }
 
         private void PopulateTable(IEnumerable<Record> dt)
@@ -47,11 +49,6 @@ namespace MP2_IT114L
                     byte[] imageData = record.Record_Image;
                     string base64String = Convert.ToBase64String(imageData);
                     imageControl.ImageUrl = "data:image/jpeg;base64," + base64String;
-                    //string imageString = record.Record_Image;
-                    //byte[] imageData = Convert.FromBase64String(imageString);
-                    //string base64String = Convert.ToBase64String(imageData);
-                    //imageControl.ImageUrl = "data:image/jpeg;base64," + base64String;
-                    //imageControl.AlternateText = record.Record_Image + ".jpg";
                 }
                 LiteralControl textLiteral = new LiteralControl(); // For the title of the product
                 textLiteral.Text = record.ProductName;
@@ -71,7 +68,6 @@ namespace MP2_IT114L
                 row.Cells.Add(priceCell);
 
                 var deleteButton = new Button();
-                deleteButton.ID = "Btn_" + record.ProductName;
                 deleteButton.Text = "Delete";
                 deleteButton.CssClass = "btn btn-danger asp-delete-button";
                 deleteButton.Click += (sender, e) => {

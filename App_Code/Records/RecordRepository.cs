@@ -48,21 +48,22 @@ namespace MP2_IT114L
         }
 
         //Adds records to the database
-        public void AddRecord(string recordName, string recordArtist, string genre, float price, int stock, string description)
+        public void AddRecord(string recordName, string recordArtist, byte[] recordImage, string genre, float price, int stock, string description)
         {      
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
             {
                 connection.Open();
                 command.CommandText =
-                    "INSERT INTO Record (Product_Id, Record_Name, Artist, Genre, Price, Stock, Description) " +
-                    "VALUES (@Product_Id, @Record_Name, @Artist, @Genre, @Price, @Stock, @Description)";
+                    "INSERT INTO Record (Product_Id, Record_Name, Artist, Record_Image, Genre, Price, Stock, Description) " +
+                    "VALUES (@Product_Id, @Record_Name, @Artist, @Record_Image, @Genre, @Price, @Stock, @Description)";
 
                 string productId = GenerateProductId();
 
                 command.Parameters.AddWithValue("@Product_Id", productId);
                 command.Parameters.AddWithValue("@Record_Name", recordName);
                 command.Parameters.AddWithValue("@Artist", recordArtist);
+                command.Parameters.AddWithValue("@Record_Image", recordImage);
                 command.Parameters.AddWithValue("@Genre", genre);
                 command.Parameters.AddWithValue("@Price", price);
                 command.Parameters.AddWithValue("@Stock", stock);
