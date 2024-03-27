@@ -22,7 +22,6 @@
             <div class="admin-login-container flex-center">
                 <a class="link" href="../customer/home.html"><i class="ri-arrow-left-line"></i>Go back</a>
                 <div>
-                    <h1>Admin Page</h1>
                     <fieldset>
                         <legend>Email</legend>
                         <asp:TextBox ID="TB_email" runat="server" placeholder="Enter email" autocomplete="email"></asp:TextBox> <br />

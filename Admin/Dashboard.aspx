@@ -22,12 +22,12 @@
     <div class="nav-links">
         <div>
             <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="./dashboard.aspx">
-                <div class="nav-link">
+                <div class="nav-link active">
                     <i class="ri-dashboard-2-fill"></i>Dashboard
                 </div>
             </asp:HyperLink>
             <asp:HyperLink ID="ProductsLink" runat="server" NavigateUrl="./products.aspx">
-                <div class="nav-link active">
+                <div class="nav-link">
                     <i class="ri-store-2-fill"></i>Products
                 </div>
             </asp:HyperLink>
@@ -88,23 +88,6 @@
         </div>
     </div>
 </nav>
-
-    <h3>Dashboard</h3>
-
-    <div class="hamburger">
-      <div class="ham-icon" onclick="toggleMenu()"><i class="ri-menu-fill"></i></div>
-      <div class="nav-links">
-        <div>
-          <a href="./dashboard.html"><div class="nav-link active"><i class="ri-dashboard-2-fill"></i>Dashboard</div></a>
-          <a href="./products.html"><div class="nav-link"><i class="ri-store-2-fill"></i>Products</div></a>
-          <a href="./orders.html"><div class="nav-link"><i class="ri-money-dollar-circle-fill"></i>Orders</div></a>
-          <a href="./users.html"><div class="nav-link"><i class="ri-user-fill"></i>Users</div></a>
-          <a href="./analytics.html"><div class="nav-link"><i class="ri-bar-chart-fill"></i>Analytics</div></a>
-          <a href="../index.html"><div class="nav-link"><i class="ri-logout-box-line"></i>Logout</div></a>
-        </div>  
-      </div>
-    </div>
-  </nav>
 
   <main>
     <header>
