@@ -81,6 +81,7 @@
     <Content Include="Styles\admin.css" />
     <Content Include="Styles\clash.css" />
     <Content Include="Styles\general.css" />
+    <Content Include="Scripts\theme.js" />
     <Content Include="UserPage-Profile.aspx" />
     <Content Include="Web.config" />
     <Content Include="Index.aspx" />

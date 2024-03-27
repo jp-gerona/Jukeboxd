@@ -195,12 +195,12 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.Button NextButton;
 
         /// <summary>
-        /// ToggleDarkModeButton control.
+        /// themeButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ToggleDarkModeButton;
+        protected global::System.Web.UI.WebControls.Button themeButton;
     }
 }

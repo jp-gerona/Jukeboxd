@@ -13,8 +13,8 @@ namespace MP2_IT114L
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-                // Fetch data from the database for the current page
-                var RecordRepository = new RecordRepository();
+            // Fetch data from the database for the current page
+            var RecordRepository = new RecordRepository();
                 IEnumerable<Record> dt = RecordRepository.GetAllProducts();
 
                 // Populate the table with data

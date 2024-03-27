@@ -94,7 +94,7 @@ main header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--background);
-    border-bottom: var(--border-2) var(--black);
+    border-bottom: var(--border-2) var(--filled);
     z-index: 99;
 }
 
@@ -138,12 +138,12 @@ table {
     width: 100%;
     min-width: 950px;
     table-layout: auto;
-    border-collapse: seperate;
+    border-collapse: separate;
     border-spacing: 0;
-    background-color: var(--white);
-    border-top: var(--border-2) var(--black);
-    border-left: var(--border-2) var(--black);
-    border-right: var(--border-2) var(--black);
+    background-color: var(--container);
+    border-top: var(--border-2) var(--filled);
+    border-left: var(--border-2) var(--filled);
+    border-right: var(--border-2) var(--filled);
     border-radius: var(--border-radius);
 }
 
@@ -155,18 +155,18 @@ th, td {
 
 th {
     font-weight: 550;
-    border-bottom: var(--border-2) var(--black);
+    border-bottom: var(--border-2) var(--filled);
 }
 
 td {
-    border-bottom: var(--border-2) var(--black);
+    border-bottom: var(--border-2) var(--filled);
 }
 
     td img {
         width: 6rem;
         height: 6rem;
         object-fit: cover;
-        border: var(--border-2) var(--black);
+        border: var(--border-2) var(--filled);
         margin-right: 0.8rem;
         vertical-align: middle;
     }
@@ -279,7 +279,7 @@ td {
             gap: 0.8rem;
             transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
             cursor: pointer;
-            border-top: var(--border-1) var(--white);
+            border-top: var(--border-1) var(--filled);
         }
 
             .topbar .nav-link:hover {

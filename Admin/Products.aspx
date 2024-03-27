@@ -4,12 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../../images/logo/Jukeboxd-favicon.png" type="image/x-icon" />
     <title>Jukeboxd</title>
 
     <link rel="stylesheet" type="text/css" href="~/Styles/general.css" />
     <link rel="stylesheet" type="text/css" href="~/Styles/admin.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
 </head>
 <body>
     <form runat="server">
@@ -93,8 +96,8 @@
                 <h3>Products</h3>
                 <div class="actions">
                     <asp:Button ID="btnSearch" runat="server" CssClass="btn icon ri-search-line" Text="&#xF0D1;" />
-                    <asp:HyperLink ID="lnkNewProduct" runat="server" NavigateUrl="~/Products/New.aspx" CssClass="btn btn-accent asp-add-product">
-                    New Product
+                    <asp:HyperLink ID="lnkNewProduct" runat="server" NavigateUrl="./New-Product.aspx" CssClass="btn btn-accent asp-add-product">
+                        New Product
                     </asp:HyperLink>
                 </div>
             </header>
@@ -123,11 +126,12 @@
 
             <footer>
                 <p>Copyright &copy; <%: DateTime.Now.Year %> Orbit.</p>
-                <asp:Button ID="ToggleDarkModeButton" runat="server" CssClass="btn btn-accent light-dark-toggle ri-sun-fill" Text='&#xF1BC;' />
+                <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" ClientIDMode="Static" type="button" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
             </footer>
         </main>
 
         <script src="../scripts/admin.js"></script>
+        <script src="../scripts/theme.js"></script>
     </form>
 </body>
 </html>
