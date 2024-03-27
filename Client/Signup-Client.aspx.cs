@@ -17,6 +17,7 @@ namespace MP2_IT114L
             string name = TB_username.Text;
             string email = TB_email.Text;
             string password = TB_password.Text;
+            string address = "";
             string type = "Customer";
 
             UserRepository userRepository = new UserRepository();
@@ -26,7 +27,7 @@ namespace MP2_IT114L
             }
             else
             {
-                userRepository.CreateUser(name, email, password, type);
+                userRepository.CreateUser(name, email, password, address, type);
                 Response.Redirect("Login-Client.aspx");
             }
         }

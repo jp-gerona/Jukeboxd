@@ -20,6 +20,8 @@ namespace MP2_IT114L
 
             if (userRepository.CheckUser(email, password, type))
             {
+                Session["LoggedInUserEmail"] = email;
+                Session["UserType"] = type;
                 if (userRepository.CheckUser(email, password, "Customer"))
                 {
                     Response.Write("Invalid email or password.");

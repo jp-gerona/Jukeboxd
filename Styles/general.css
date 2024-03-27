@@ -53,9 +53,12 @@ small {
     letter-spacing: 0.05rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--background);
-    scroll-behavior: smooth;
 }
 
 a {
@@ -96,6 +99,16 @@ i {
     .btn:not(:disabled):hover {
         box-shadow: 0.25rem 0.25rem 0 var(--black);
         transform: translate(-0.25rem, -0.25rem);
+    }
+
+.btn-primary {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+    .btn-primary:hover {
+        background-color: var(--accent);
+        color: var(--black);
     }
 
 .btn-accent {
@@ -175,6 +188,16 @@ fieldset i {
     transform: translateY(-50%);
 }
 
-.icon {
-    font-size:1.25rem
+fieldset .image-upload {
+    border: 1px dashed var(--black);
+    background-color: var(--white);
+}
+
+link {
+    color: var(--black);
+    transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}
+
+.link:hover {
+    color: var(--accent);
 }

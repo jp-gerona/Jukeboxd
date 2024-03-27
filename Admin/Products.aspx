@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="icon" href="../../images/logo/Jukeboxd-favicon.png" type="image/x-icon" />
     <title>Jukeboxd</title>
 
     <link rel="stylesheet" type="text/css" href="~/Styles/general.css" />
@@ -18,25 +19,71 @@
             </a>
             <div class="nav-links">
                 <div>
-                    <asp:HyperLink ID="lnkDashboard" runat="server" NavigateUrl="~/Dashboard.aspx" CssClass="nav-link">
-                    <i class="ri-dashboard-2-fill"></i>Dashboard
+                    <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="./dashboard.html">
+                        <div class="nav-link">
+                            <i class="ri-dashboard-2-fill"></i>Dashboard
+                        </div>
                     </asp:HyperLink>
-                    <asp:HyperLink ID="lnkProducts" runat="server" NavigateUrl="~/Products.aspx" CssClass="nav-link active">
-                    <i class="ri-store-2-fill"></i>Products
+                    <asp:HyperLink ID="ProductsLink" runat="server" NavigateUrl="./products.html">
+                        <div class="nav-link active">
+                            <i class="ri-store-2-fill"></i>Products
+                        </div>
                     </asp:HyperLink>
-                    <asp:HyperLink ID="lnkOrders" runat="server" NavigateUrl="~/Orders.aspx" CssClass="nav-link">
-                    <i class="ri-money-dollar-circle-fill"></i>Orders
+                    <asp:HyperLink ID="OrdersLink" runat="server" NavigateUrl="./orders.html">
+                        <div class="nav-link">
+                            <i class="ri-money-dollar-circle-fill"></i>Orders
+                        </div>
                     </asp:HyperLink>
-                    <asp:HyperLink ID="lnkUsers" runat="server" NavigateUrl="~/Users.aspx" CssClass="nav-link">
-                    <i class="ri-user-fill"></i>Users
+                    <asp:HyperLink ID="UsersLink" runat="server" NavigateUrl="./users.html">
+                        <div class="nav-link">
+                            <i class="ri-user-fill"></i>Users
+                        </div>
                     </asp:HyperLink>
-                    <asp:HyperLink ID="lnkAnalytics" runat="server" NavigateUrl="~/Analytics.aspx" CssClass="nav-link">
-                    <i class="ri-bar-chart-fill"></i>Analytics
+                    <asp:HyperLink ID="AnalyticsLink" runat="server" NavigateUrl="./analytics.html">
+                        <div class="nav-link">
+                            <i class="ri-bar-chart-fill"></i>Analytics
+                        </div>
                     </asp:HyperLink>
                 </div>
-                <asp:HyperLink ID="lnkLogout" runat="server" NavigateUrl="~/Index.aspx" CssClass="nav-link">
-        <i class="ri-logout-box-line"></i>Logout
+                <asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="../index.html">
+                    <div class="nav-link">
+                        <i class="ri-logout-box-line"></i>Logout
+                    </div>
                 </asp:HyperLink>
+            </div>
+        </nav>
+
+        <nav class="topbar">
+            <div class="site-logo">
+                <asp:Image ID="TopbarLogo" runat="server" ImageUrl="../../images/logo/Jukeboxd-logo.svg" AlternateText="Topbar Logo" />
+            </div>
+
+            <h3>Products</h3>
+
+            <div class="hamburger">
+                <div class="ham-icon" onclick="toggleMenu()"><i class="ri-menu-fill"></i></div>
+                <div class="nav-links">
+                    <div>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="./dashboard.html">
+                    <div class="nav-link"><i class="ri-dashboard-2-fill"></i>Dashboard</div>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="./products.html">
+                    <div class="nav-link active"><i class="ri-store-2-fill"></i>Products</div>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="./orders.html">
+                    <div class="nav-link"><i class="ri-money-dollar-circle-fill"></i>Orders</div>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="./users.html">
+                    <div class="nav-link"><i class="ri-user-fill"></i>Users</div>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="./analytics.html">
+                    <div class="nav-link"><i class="ri-bar-chart-fill"></i>Analytics</div>
+                        </asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="../index.html">
+                    <div class="nav-link"><i class="ri-logout-box-line"></i>Logout</div>
+                        </asp:HyperLink>
+                    </div>
+                </div>
             </div>
         </nav>
 
