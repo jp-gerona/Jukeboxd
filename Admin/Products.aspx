@@ -29,7 +29,7 @@
                             <i class="ri-store-2-fill"></i>Products
                         </div>
                     </asp:HyperLink>
-                    <asp:HyperLink ID="OrdersLink" runat="server" NavigateUrl="./orders.html">
+                    <asp:HyperLink ID="OrdersLink" runat="server" NavigateUrl="./orders.aspx">
                         <div class="nav-link">
                             <i class="ri-money-dollar-circle-fill"></i>Orders
                         </div>
@@ -39,13 +39,13 @@
                             <i class="ri-user-fill"></i>Users
                         </div>
                     </asp:HyperLink>
-                    <asp:HyperLink ID="AnalyticsLink" runat="server" NavigateUrl="./analytics.html">
+                    <asp:HyperLink ID="AnalyticsLink" runat="server" NavigateUrl="./analytics.aspx">
                         <div class="nav-link">
                             <i class="ri-bar-chart-fill"></i>Analytics
                         </div>
                     </asp:HyperLink>
                 </div>
-                <asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="../index.html">
+                <asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="../index.aspx">
                     <div class="nav-link">
                         <i class="ri-logout-box-line"></i>Logout
                     </div>

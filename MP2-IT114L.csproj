@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Login-Admin.aspx" />
+    <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\Users.aspx" />
     <Content Include="App_Data\mystore.mdf" />
     <Content Include="App_Data\mystore_log.ldf">
@@ -89,6 +90,13 @@
     <Content Include="CartTable.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
