@@ -1,84 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.Services.Description;
-using System.Xml.Linq;
-using MP2_IT114L.App_Code.Users;
 
 namespace MP2_IT114L.App_Code.Users
 {
     public class UserProfile
     {
-        private readonly string connectionString;
+        //Replace connectionString according to server            
+        private string connectionString = @"Data Source=DESKTOP-0K7H8FH;Initial Catalog=mystore;Integrated Security=True";
 
-        public UserProfile()
+        public List<User> GetAccountsByEmail(string email)
         {
-            connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-        }
-
-        public string GetUserName(string email)
-        {
-            string userName = "";
-
-            using (var connection = new SqlConnection(connectionString))
-            using (var command = connection.CreateCommand())
-            {
-                connection.Open();
-                command.CommandText =
-                    "SELECT Name FROM Account WHERE Email = @Email";
-
-                command.Parameters.AddWithValue("@Email", email);
-
-
-
-                object result = command.ExecuteScalar();
-
-                // Check if the result is not null and cast it to string
-                if (result != null)
-                {
-                    userName = result.ToString();
-                }
-
-                connection.Close();
-            }
-
-            return userName;
-        }
-
-        public User GetUserProfile(int accountId)
-        {
-            User userProfile = new User();
+            List<User> accounts = new List<User>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT Account_Id, Name, Email, Password, Type FROM Account WHERE Account_Id = @Account_Id";
+                string query = "SELECT * FROM Account WHERE Email = @Email";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Account_Id", accountId);
+                    command.Parameters.AddWithValue("@Email", email);
 
                     connection.Open();
-
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.Read())
+                        while (reader.Read())
                         {
-                            userProfile.AccountId = reader["Account_Id"].ToString();
-                            userProfile.Name = reader["Name"].ToString();
-                            userProfile.Email = reader["Email"].ToString();
-                            userProfile.Password = reader["Password"].ToString();
-                            userProfile.Type = reader["Type"].ToString();
+                            User account = new User
+                            {
+                                AccountId = Convert.ToString(reader["Account_Id"]),
+                                Name = Convert.ToString(reader["Name"]),
+                                Email = Convert.ToString(reader["Email"]),
+                                Password = Convert.ToString(reader["Password"]),
+                                Address = Convert.ToString(reader["Address"]),
+                                Type = Convert.ToString(reader["Type"])
+                            };
+                            accounts.Add(account);
                         }
                     }
                 }
             }
 
-            return userProfile;
+            return accounts;
+        }
+
+        public void UpdateUserAddress(string email, string newAddress)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE Account SET Address = @NewAddress WHERE Email = @Email";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@NewAddress", newAddress);
+                    command.Parameters.AddWithValue("@Email", email);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
-
 }

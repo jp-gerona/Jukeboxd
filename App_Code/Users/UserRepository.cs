@@ -3,24 +3,22 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Services.Description;
-using System.Xml.Linq;
 
 namespace MP2_IT114L.App_Code.Users
 {
     public class UserRepository
     {
         private readonly string connectionString;
-        public UserRepository() 
+        public UserRepository()
         {
             connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         }
-        public void CreateUser(string name, string email, string password, string type)
+        public void CreateUser(string name, string email, string password, string address, string type)
         {
-            
+
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
             {
@@ -34,7 +32,6 @@ namespace MP2_IT114L.App_Code.Users
                 if (type == "Admin")
                 {
                     accountId = GenerateAccountIdAdmin();
-                    command.Parameters.AddWithValue("@Address", "N/A");
                 }
                 else
                 {
@@ -45,7 +42,7 @@ namespace MP2_IT114L.App_Code.Users
                 command.Parameters.AddWithValue("@Name", name);
                 command.Parameters.AddWithValue("@Email", email);
                 command.Parameters.AddWithValue("@Password", password);
-                command.Parameters.AddWithValue("@Address", "nfkjdbfkabsdfkjbsdafj");
+                command.Parameters.AddWithValue("@Address", "");
                 command.Parameters.AddWithValue("@Type", type);
 
                 command.ExecuteNonQuery();
@@ -55,7 +52,7 @@ namespace MP2_IT114L.App_Code.Users
 
         public bool CheckUser(string email, string password, string type)
         {
-            
+
             bool userExists = false;
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
@@ -79,7 +76,7 @@ namespace MP2_IT114L.App_Code.Users
 
         public bool CheckExistingUser(string email)
         {
-            
+
             bool userExists = false;
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
@@ -115,12 +112,12 @@ namespace MP2_IT114L.App_Code.Users
             string accountIdString = "CU" + newAccountId.ToString("D7");
 
             return accountIdString;
-        } 
+        }
 
         private int GetLatestAccountId()
         {
             int latestAccountId = 0;
-            
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT MAX(Account_Id) FROM Account";

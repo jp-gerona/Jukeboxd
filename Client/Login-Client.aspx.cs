@@ -20,13 +20,15 @@ namespace MP2_IT114L
 
             if (userRepository.CheckUser(email, password, type))
             {
+                Session["LoggedInUserEmail"] = email;
+                Session["UserType"] = type;
                 if (userRepository.CheckUser(email, password, "Admin"))
                 {
                     Response.Write("Invalid email or password.");
                 }
                 else
                 {
-                    Response.Redirect("Index.aspx");
+                    Response.Redirect("~/Index.aspx");
                 }
             }
             else

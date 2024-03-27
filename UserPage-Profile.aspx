@@ -11,20 +11,13 @@
         <div>
             <h1>User Profile</h1>
             <div>
-                <label>Name: </label>
-                <asp:Label ID="LblName" runat="server" Text=""></asp:Label>
-            </div>
-            <div>
-                <label>Email: </label>
-                <asp:Label ID="LblEmail" runat="server" Text=""></asp:Label>
-            </div>
-            <div>
-                <label>Password: </label>
-                <asp:Label ID="LblPassword" runat="server" Text=""></asp:Label>
-            </div>
-            <div>
-                <label>Type: </label>
-                <asp:Label ID="LblType" runat="server" Text=""></asp:Label>
+                <asp:Label ID="lblAccountInfo" runat="server" Text=""></asp:Label>
+                <br />
+                <asp:TextBox ID="TxtNewAddress" runat="server" placeholder="Enter new address"></asp:TextBox>
+                <br />
+                <asp:Button ID="BtnChangeAddress" runat="server" Text="Change Address" OnClick="BtnChangeAddress_Click" />
+                <br />
+                <asp:Button ID="BtnLogout" runat="server" Text="Logout" OnClick="BtnLogout_Click" />
             </div>
         </div>
     </form>
