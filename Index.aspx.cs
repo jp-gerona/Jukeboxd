@@ -5,11 +5,39 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Web;
 using System.Web.Services.Description;
+using MP2_IT114L.App_Code.Users;
 
 namespace MP2_IT114L
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        private readonly string connectionString;
+        public WebForm1()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string userEmail = Session["LoggedInUserEmail"] as string;
+
+            if (!string.IsNullOrEmpty(userEmail))
+            {
+                object userID;
+                using (var connection = new SqlConnection(connectionString))
+                using (var command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = "SELECT Account.Account_Id FROM Account WHERE Email = @Email";
+                    command.Parameters.AddWithValue("@Email", userEmail);
+                    userID = command.ExecuteScalar();
+                }
+            }
+            else
+            {
+                // Handle case where user email is not found in session
+                Response.Write("Error: User email not found in session.");
+            }
+        }
         public void AddRecord_Click(object sender, EventArgs e)
         {
             string recordName = TB_RecordName.Text;
@@ -31,24 +59,68 @@ namespace MP2_IT114L
             RecordRepository.DeleteRecord(recordName);
         }
 
+        public string GetAccountIdByEmail(string email)
+        {
+            object accountId = null;
+            string userEmail = Session["LoggedInUserEmail"] as string;
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = connection.CreateCommand())
+            {
+                connection.Open();
+                command.CommandText = "SELECT Account.Account_Id FROM Account WHERE Email = @Email";
+                command.Parameters.AddWithValue("@Email", userEmail);
+                accountId = command.ExecuteScalar();
+            }
+            return (string)accountId;
+        }
+
         public void AddToCart_Click(Object sender, EventArgs e)
         {
-            string productId = TB_ProductId.Text;
-            int quantity = int.Parse(TB_Quantity.Text);
+            string userEmail = Session["LoggedInUserEmail"] as string;
 
-            var CartRepository = new CartRepository();
-            CartRepository.AddToCart(productId, quantity);
+            if (!string.IsNullOrEmpty(userEmail))
+            {
+                object userID = null;
+                using (var connection = new SqlConnection(connectionString))
+                using (var command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText = "SELECT Account.Account_Id FROM Account WHERE Email = @Email";
+                    command.Parameters.AddWithValue("@Email", userEmail);
+                    userID = command.ExecuteScalar();
+                }
+
+                // Ensure the user ID is valid (greater than 0)
+                if (!string.IsNullOrEmpty((string)userID))
+                {
+                    Session["UserID"] = userID;
+                    if (TB_Quantity.Text != "")
+                    {
+                        string productId = TB_ProductId.Text;
+                        int quantity = int.Parse(TB_Quantity.Text);
+
+                        var CartRepository = new CartRepository();
+                        CartRepository.AddToCart(productId, quantity, (string)userID);
+                    }
+                    
+                }
+                else
+                {
+                    // Handle case where user ID is not found
+                    Response.Write("Error: User ID not found.");
+                }
+            }
+            else
+            {
+                // Handle case where user email is not found in session
+                Response.Write("Error: User email not found in session.");
+            }
         }
+
 
         public IEnumerable<Record> recordRepository = new List<Record>();
 
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            var RecordRepository = new RecordRepository();
-            recordRepository = RecordRepository.GetAllProducts();
-            //PostRepeater.DataSource = posts;
-            //PostRepeater.DataBind();
-        }
+        
 
         public void AddImage_Click(Object sender, EventArgs e)
         {
