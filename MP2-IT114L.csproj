@@ -76,6 +76,8 @@
     <Content Include="Client\Login-Client.aspx" />
     <Content Include="Client\Signup-Client.aspx" />
     <Content Include="Admin\Products.aspx" />
+    <Content Include="Admin\New-Product.aspx" />
+    <Content Include="Styles\customer.css" />
     <Content Include="Scripts\admin.js" />
     <Content Include="Styles\admin.css" />
     <Content Include="Styles\clash.css" />
@@ -110,6 +112,13 @@
     </Compile>
     <Compile Include="Client\Login-Client.aspx.designer.cs">
       <DependentUpon>Login-Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\New-Product.aspx.cs">
+      <DependentUpon>New-Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\New-Product.aspx.designer.cs">
+      <DependentUpon>New-Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Code\Users\User.cs" />
