@@ -24,39 +24,39 @@ namespace MP2_IT114L
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// LblName control.
+        /// lblAccountInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblName;
+        protected global::System.Web.UI.WebControls.Label lblAccountInfo;
 
         /// <summary>
-        /// LblEmail control.
+        /// TxtNewAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblEmail;
+        protected global::System.Web.UI.WebControls.TextBox TxtNewAddress;
 
         /// <summary>
-        /// LblPassword control.
+        /// BtnChangeAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPassword;
+        protected global::System.Web.UI.WebControls.Button BtnChangeAddress;
 
         /// <summary>
-        /// LblType control.
+        /// BtnLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblType;
+        protected global::System.Web.UI.WebControls.Button BtnLogout;
     }
 }

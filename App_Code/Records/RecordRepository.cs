@@ -24,7 +24,7 @@ namespace MP2_IT114L
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
             {
-                connection.Open();
+                    connection.Open();
                 command.CommandText =
                     "SELECT * " +
                     "FROM Record " +
@@ -109,7 +109,7 @@ namespace MP2_IT114L
         }
 
         //Deletes a record in the database
-        public void DeleteRecord(string recordName)
+        public void DeleteRecord(string recordId)
         {
             using (var connection = new SqlConnection(connectionString))
             using (var command = connection.CreateCommand())
@@ -117,9 +117,9 @@ namespace MP2_IT114L
                 connection.Open();
                 command.CommandText =
                     "DELETE FROM Record " +
-                    "WHERE Record_Name = @Record_Name";
+                    "WHERE Product_Id = @Product_Id";
 
-                command.Parameters.AddWithValue("@Record_Name", recordName);
+                command.Parameters.AddWithValue("@Product_Id", recordId);
 
                 command.ExecuteNonQuery();
                 connection.Close();

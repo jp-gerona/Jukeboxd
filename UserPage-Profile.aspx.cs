@@ -1,9 +1,6 @@
 ﻿using MP2_IT114L.App_Code.Users;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace MP2_IT114L
@@ -12,20 +9,53 @@ namespace MP2_IT114L
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int accountId = Convert.ToInt32(Session["LoggedInUserId"]);
-            if (accountId > 0)
+            string userEmail = Session["LoggedInUserEmail"] as string;
+
+            if (!string.IsNullOrEmpty(userEmail))
             {
                 UserProfile userProfile = new UserProfile();
-                User userProfileModel = userProfile.GetUserProfile(accountId);
-                LblName.Text = userProfileModel.Name;
-                LblEmail.Text = userProfileModel.Email;
-                LblPassword.Text = userProfileModel.Password; 
-                LblType.Text = userProfileModel.Type;
+                List<User> userAccounts = userProfile.GetAccountsByEmail(userEmail);
+                DisplayProfileAndAccounts(userAccounts);
             }
             else
             {
-                Response.Redirect("~/Login.aspx");
+                Response.Redirect("Index.aspx");
             }
         }
+
+        private void DisplayProfileAndAccounts(List<User> userAccounts)
+        {
+            foreach (User account in userAccounts)
+            {
+                lblAccountInfo.Text += $"Name: {account.Name} <br/> Email: {account.Email} <br/> Address: {account.Address} <br/>";
+            }
+        }
+
+        protected void BtnChangeAddress_Click(object sender, EventArgs e)
+        {
+            string newAddress = TxtNewAddress.Text.Trim();
+            UpdateUserAddress(newAddress);
+        }
+
+        private void UpdateUserAddress(string newAddress)
+        {
+            UserProfile userProfile = new UserProfile();
+            userProfile.UpdateUserAddress(Session["LoggedInUserEmail"].ToString(), newAddress);
+        }
+
+        protected void BtnLogout_Click(object sender, EventArgs e)
+        {
+            string userType = Session["UserType"] as string;
+            Session.Clear();
+            if (userType == "Admin")
+            {
+                Response.Redirect("Admin/Login-Admin.aspx");
+            }
+            else if (userType == "Customer")
+            {
+                Response.Redirect("Client/Login-Client.aspx");
+            }
+        }
+
     }
 }

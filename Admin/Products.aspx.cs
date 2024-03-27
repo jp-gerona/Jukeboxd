@@ -75,8 +75,10 @@ namespace MP2_IT114L
                 deleteButton.Text = "Delete";
                 deleteButton.CssClass = "btn btn-danger asp-delete-button";
                 deleteButton.Click += (sender, e) => {
-                    // Handle button click event (e.g., delete the record)
-                    // You can access the record associated with this button using 'record' variable
+                    var recordId = record.ProductId.ToString();
+                    var RecordRepository = new RecordRepository();
+                    RecordRepository.DeleteRecord(recordId);
+                    Response.Redirect(Request.RawUrl);
                 };
                 var buttonCell = new TableCell();
                 buttonCell.Controls.Add(deleteButton);
@@ -85,16 +87,6 @@ namespace MP2_IT114L
                 // Add the row to the table
                 MyTable.Rows.Add(row);
             }
-            
-        }
-
-        protected void DeleteButton_Click(object sender, EventArgs e)
-        {
-            // Handle the delete button click event
-            Button deleteButton = (Button)sender;
-            string productId = deleteButton.ID.Split('_')[1];
-
-            // Perform deletion operation or any other action based on productId
         }
     }
 }
