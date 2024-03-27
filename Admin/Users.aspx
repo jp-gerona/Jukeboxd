@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="MP2_IT114L.Records" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="MP2_IT114L.Admin.Users" %>
 
 <!DOCTYPE html>
 
@@ -25,7 +25,7 @@
                         </div>
                     </asp:HyperLink>
                     <asp:HyperLink ID="ProductsLink" runat="server" NavigateUrl="./products.aspx">
-                        <div class="nav-link active">
+                        <div class="nav-link">
                             <i class="ri-store-2-fill"></i>Products
                         </div>
                     </asp:HyperLink>
@@ -35,7 +35,7 @@
                         </div>
                     </asp:HyperLink>
                     <asp:HyperLink ID="UsersLink" runat="server" NavigateUrl="./users.aspx">
-                        <div class="nav-link">
+                        <div class="nav-link active">
                             <i class="ri-user-fill"></i>Users
                         </div>
                     </asp:HyperLink>
@@ -58,13 +58,13 @@
                 <asp:Image ID="TopbarLogo" runat="server" ImageUrl="../../images/logo/Jukeboxd-logo.svg" AlternateText="Topbar Logo" />
             </div>
 
-            <h3>Products</h3>
+            <h3>Users</h3>
 
             <div class="hamburger">
                 <div class="ham-icon" onclick="toggleMenu()"><i class="ri-menu-fill"></i></div>
                 <div class="nav-links">
                     <div>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="./dashboard.html">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="./dashboard.aspx">
                     <div class="nav-link"><i class="ri-dashboard-2-fill"></i>Dashboard</div>
                         </asp:HyperLink>
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="./products.aspx">
@@ -88,46 +88,45 @@
         </nav>
 
         <main>
-
-            <header>
-                <h3>Products</h3>
+            <header class="header">
+                <h3>Users</h3>
                 <div class="actions">
-                    <asp:Button ID="btnSearch" runat="server" CssClass="btn icon ri-search-line" Text="&#xF0D1;" />
-                    <asp:HyperLink ID="lnkNewProduct" runat="server" NavigateUrl="~/Products/New.aspx" CssClass="btn btn-accent asp-add-product">
-                    New Product
-                    </asp:HyperLink>
+                    <button class="btn asp-search-popover"><i class="ri-search-line"></i></button>
                 </div>
             </header>
-
             <section class="products-section">
                 <div class="table-container">
-                    <asp:Table ID="MyTable" runat="server" CssClass="asp-records-table">
+                    <asp:Table ID="AspNetTable" CssClass="asp-records-table" runat="server">
                         <asp:TableHeaderRow>
-                            <asp:TableHeaderCell>Prod. ID</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Title</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Artist</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Genre</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Stock</asp:TableHeaderCell>
-                            <asp:TableHeaderCell>Price</asp:TableHeaderCell>
-                            <asp:TableHeaderCell></asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Acct. ID</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Username</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Email</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Address</asp:TableHeaderCell>
                         </asp:TableHeaderRow>
+                        <asp:TableRow>
+                            <asp:TableCell>C00000001</asp:TableCell>
+                            <asp:TableCell>Lebron_James</asp:TableCell>
+                            <asp:TableCell>lebronjames@gmail.com</asp:TableCell>
+                            <asp:TableCell>Los Angeles, CA</asp:TableCell>
+                        </asp:TableRow>
                     </asp:Table>
                 </div>
 
+
                 <div class="pagination">
-                    <asp:Button ID="PrevButton" runat="server" CssClass="btn asp-prev ri-arrow-left-s-line" Text='&#xEA64; Prev' Enabled="false" />
-                    <span class="asp-page-info" runat="server">Page 1 of 10</span>
-                    <asp:Button ID="NextButton" runat="server" CssClass="btn asp-next ri-arrow-right-s-line" Text='&#xEA6E; Next' />
+                    <button disabled class="btn asp-prev"><i class="ri-arrow-left-s-line"></i>Prev</button>
+                    <span class="asp-page-info">Page 1 of 1</span>
+                    <button disabled class="btn asp-next"><i class="ri-arrow-right-s-line"></i>Next</button>
                 </div>
             </section>
 
             <footer>
-                <p>Copyright &copy; <%: DateTime.Now.Year %> Orbit.</p>
-                <asp:Button ID="ToggleDarkModeButton" runat="server" CssClass="btn btn-accent light-dark-toggle ri-sun-fill" Text='&#xF1BC;' />
+                <p>Copyright &copy; 2024 Orbit.</p>
+                <button class="btn btn-accent light-dark-toggle"><i class="ri-sun-fill"></i></button>
             </footer>
         </main>
-
-        <script src="../scripts/admin.js"></script>
     </form>
+
+    <script src="../scripts/admin.js"></script>
 </body>
 </html>

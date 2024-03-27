@@ -109,19 +109,62 @@ namespace MP2_IT114L
         }
 
         //Deletes a record in the database
+        //public void DeleteRecord(string recordId)
+        //{
+        //    using (var connection = new SqlConnection(connectionString))
+        //    using (var command = connection.CreateCommand())
+        //    {
+        //        connection.Open();
+        //        command.CommandText =
+        //            "DELETE FROM Record " +
+        //            "WHERE Product_Id = @Product_Id";
+
+        //        command.Parameters.AddWithValue("@Product_Id", recordId);
+
+        //        command.ExecuteNonQuery();
+        //        connection.Close();
+        //    }
+        //}
+
         public void DeleteRecord(string recordId)
         {
             using (var connection = new SqlConnection(connectionString))
-            using (var command = connection.CreateCommand())
             {
                 connection.Open();
-                command.CommandText =
-                    "DELETE FROM Record " +
-                    "WHERE Product_Id = @Product_Id";
 
-                command.Parameters.AddWithValue("@Product_Id", recordId);
+                // Check if the record ID is associated with any cart items
+                bool recordInCart = false;
+                using (var commandCheckCart = connection.CreateCommand())
+                {
+                    commandCheckCart.CommandText = "SELECT COUNT(*) FROM Cart WHERE Product_Id = @Product_Id";
+                    commandCheckCart.Parameters.AddWithValue("@Product_Id", recordId);
 
-                command.ExecuteNonQuery();
+                    int cartItemCount = (int)commandCheckCart.ExecuteScalar();
+                    if (cartItemCount > 0)
+                    {
+                        recordInCart = true;
+
+                        // If record is in cart, delete it from the cart first
+                        using (var commandDeleteFromCart = connection.CreateCommand())
+                        {
+                            commandDeleteFromCart.CommandText = "DELETE FROM Cart WHERE Product_Id = @Product_Id";
+                            commandDeleteFromCart.Parameters.AddWithValue("@Product_Id", recordId);
+                            commandDeleteFromCart.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                // If the record is not in the cart or if it was successfully removed from the cart, delete the record
+                if (!recordInCart)
+                {
+                    using (var commandDeleteRecord = connection.CreateCommand())
+                    {
+                        commandDeleteRecord.CommandText = "DELETE FROM Record WHERE Product_Id = @Product_Id";
+                        commandDeleteRecord.Parameters.AddWithValue("@Product_Id", recordId);
+                        commandDeleteRecord.ExecuteNonQuery();
+                    }
+                }
+
                 connection.Close();
             }
         }
