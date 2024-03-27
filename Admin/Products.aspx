@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Jukeboxd</title>
 
     <link rel="stylesheet" type="text/css" href="~/Styles/general.css" />
     <link rel="stylesheet" type="text/css" href="~/Styles/admin.css" />
@@ -64,23 +64,6 @@
                             <asp:TableHeaderCell>Price</asp:TableHeaderCell>
                             <asp:TableHeaderCell></asp:TableHeaderCell>
                         </asp:TableHeaderRow>
-
-                        <asp:TableRow runat="server">
-                            <asp:TableCell runat="server">1</asp:TableCell>
-                            <asp:TableCell runat="server">
-                                <asp:Image ID="Image1" runat="server" ImageUrl="../images/vinyls/thriller-michaeljackson.png" />
-                                Thriller
-                            </asp:TableCell>
-                            <asp:TableCell runat="server">Michael Jackson</asp:TableCell>
-                            <asp:TableCell runat="server">Disco</asp:TableCell>
-                            <asp:TableCell runat="server">23</asp:TableCell>
-                            <asp:TableCell runat="server" CssClass="amount">&#8369; 2,499.00</asp:TableCell>
-                            <asp:TableCell runat="server" CssClass="action">
-                                <asp:Button ID="Button1" runat="server" Text="Delete" CssClass="btn btn-danger asp-delete-button" />
-                            </asp:TableCell>
-                        </asp:TableRow>
-
-
                     </asp:Table>
                 </div>
 

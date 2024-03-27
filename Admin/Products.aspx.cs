@@ -31,11 +31,31 @@ namespace MP2_IT114L
 
                 // Add cells to the row
                 row.Cells.Add(new TableCell { Text = record.ProductId });
-                row.Cells.Add(new TableCell { Text = record.ProductName });
+
+                TableCell imageAndTextCell = new TableCell();
+
+                // Create an image control
+                Image imageControl = new Image();
+                imageControl.ImageUrl = "../images/vinyls/default.jpg"; // Set the URL of the image
+                imageControl.AlternateText = "default.jpg"; // Set the alternate text of the image
+
+                // Create a literal control for the text
+                LiteralControl textLiteral = new LiteralControl();
+                textLiteral.Text = record.ProductName; // Set the text you want to display
+
+                // Add both the image and text to the cell
+                imageAndTextCell.Controls.Add(imageControl);
+                imageAndTextCell.Controls.Add(textLiteral);
+
+                // Add the cell to the row
+                row.Cells.Add(imageAndTextCell);
+
                 row.Cells.Add(new TableCell { Text = record.Artist });
                 row.Cells.Add(new TableCell { Text = record.Genre });
                 row.Cells.Add(new TableCell { Text = record.Stock.ToString() });
+
                 TableCell priceCell = new TableCell();
+                priceCell.CssClass = "amount";
                 priceCell.Text = "&#8369; " + record.Price.ToString("N2"); // Using record.Price directly
                 row.Cells.Add(priceCell);
 
