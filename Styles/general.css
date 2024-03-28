@@ -10,7 +10,9 @@
     --border-2: 2px solid;
     --border-radius: 0.25rem;
     --border-alpha: rgba(221, 221, 221, 0.5);
-    /*as*/
+}
+
+[data-theme="light"] {
     --filled: var(--black);
     --background: #f9f5f1;
     --container: var(--white);
@@ -21,18 +23,7 @@
     --danger: #ea9794;
 }
 
-/*.light-mode {
-    --filled: var(--black);
-    --background: #f9f5f1;
-    --container: var(--black);
-    --placeholder: #7f7f7f;
-    --secondary: #ffff42;
-    --accent: #af78fe;
-    --success: #9ee7ad;
-    --danger: #ea9794;
-}*/
-
-.dark-mode {
+[data-theme="dark"] {
     --filled: var(--gray);
     --background: #161717;
     --container: var(--black);
@@ -60,6 +51,7 @@ h3 {
 
 h4 {
     font-size: 1.563rem;
+    font-weight: 500;
 }
 
 h5 {
@@ -115,7 +107,9 @@ i {
     background-color: var(--background);
     color: var(--filled);
     padding: 0.75rem 1rem;
-    transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+    transition-property: transform, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
     border: var(--border-2) var(--filled);
     border-radius: var(--border-radius);
 }
@@ -167,12 +161,6 @@ fieldset {
     border: none;
 }
 
-fieldset span{
-    position: absolute;
-    bottom: -50%;
-    color: var(--danger);
-}
-
 legend {
     width: 100%;
     display: flex;
@@ -186,9 +174,9 @@ legend {
         font-weight: 450;
     }
 
-fieldset input,
-fieldset textarea,
-fieldset select {
+input,
+textarea,
+select {
     padding: 0.75rem 1rem;
     background-color: var(--container);
     color: var(--filled);
@@ -196,15 +184,15 @@ fieldset select {
     border-radius: var(--border-radius);
 }
 
-    fieldset input::placeholder,
-    fieldset textarea::placeholder,
-    fieldset select::placeholder {
+    input::placeholder,
+    textarea::placeholder,
+    select::placeholder {
         color: var(--placeholder);
     }
 
-    fieldset input:focus,
-    fieldset textarea:focus,
-    fieldset select:focus {
+    input:focus,
+    textarea:focus,
+    select:focus {
         border-color: var(--accent);
         outline: var(--border-1) var(--accent);
     }
@@ -247,18 +235,55 @@ a.link {
 .icon {
     font-size: 1.25rem;
 }
-.logout-button {
-    flex:auto;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    padding: 0;
-    font: inherit;
-    font-size: 1.25rem;
+
+
+/* *Table Styles */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
 }
 
-    .logout-button i {
-        margin-right: 5px; /* Adjust as needed */
+table {
+    width: 100%;
+    min-width: 950px;
+    table-layout: auto;
+    border-collapse: seperate;
+    border-spacing: 0;
+    background-color: var(--container);
+    border-top: var(--border-2) var(--filled);
+    border-left: var(--border-2) var(--filled);
+    border-right: var(--border-2) var(--filled);
+    border-radius: var(--border-radius);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    font-weight: 550;
+    border-bottom: var(--border-2) var(--filled);
+}
+
+td {
+    border-bottom: var(--border-2) var(--filled);
+}
+
+    td img {
+        width: 6rem;
+        height: 6rem;
+        object-fit: cover;
+        border: var(--border-2) var(--filled);
+        margin-right: 0.8rem;
+        vertical-align: middle;
+    }
+
+    td.amount {
+        font-weight: 550;
+    }
+
+    td.action {
+        text-align: center;
     }
