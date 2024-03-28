@@ -40,17 +40,5 @@ namespace MP2_IT114L
             DDL_Genre.SelectedIndex = 0;
             FU_Image.Attributes.Clear();
         }
-
-        protected void LogoutLink_Click(object sender, EventArgs e)
-        {
-            // Clear the session variable
-            Session.Remove("YourSessionVariableName");
-
-            // or set it to null
-            Session["YourSessionVariableName"] = null;
-
-            // Redirect to the logout page or any other page
-            Response.Redirect("../index.html");
-        }
     }
 }
