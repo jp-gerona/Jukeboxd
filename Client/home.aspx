@@ -86,10 +86,10 @@
                     <p>New arrivals and restocks</p>
                 </header>
 
-                <div class="records-grid">
+                <div runat="server" ID="recordsgrid" class="records-grid">
 
                     <!-- Example of record card -->
-                    <a href="./Record.aspx" class="record-card">
+                    <%--<a href="./Record.aspx" class="record-card">
                         <img src="../images/vinyls/thriller-michaeljackson.png" />
                         <div class="record-card-content">
                             <h3 class="cover">Thriller</h3>
@@ -98,7 +98,7 @@
                                 <div class="price-container">&#8369; 2,499.00</div>
                             </span>
                         </div>
-                    </a>
+                    </a>--%>
 
                     <!-- Rest are to fill out grid -->
                     <!-- Repeat your record cards here -->
