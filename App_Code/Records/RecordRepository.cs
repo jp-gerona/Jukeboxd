@@ -118,9 +118,9 @@ namespace MP2_IT114L
                 connection.Open();
                 // Order of deletion should be OrderLog -> Cart -> Record because of the key constraints
                 // Deletes from OrderLog
-                command.CommandText = "DELETE FROM OrderLog WHERE Product_Id = @Product_Id";
+                //command.CommandText = "DELETE FROM OrderLog WHERE Product_Id = @Product_Id";
                 command.Parameters.AddWithValue("@Product_Id", recordId);
-                command.ExecuteNonQuery();
+                //command.ExecuteNonQuery();
 
                 // Deletes from Cart
                 command.CommandText = "DELETE FROM Cart WHERE Product_Id = @Product_Id";

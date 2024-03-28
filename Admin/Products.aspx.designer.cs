@@ -186,6 +186,15 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.Button PrevButton;
 
         /// <summary>
+        /// PageInfoSpan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl PageInfoSpan;
+
+        /// <summary>
         /// NextButton control.
         /// </summary>
         /// <remarks>

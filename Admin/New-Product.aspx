@@ -201,7 +201,7 @@
                         <legend>
                             <asp:Label AssociatedControlID="TB_Description" Text="Description" runat="server" />
                         </legend>
-                        <asp:TextBox ID="TB_Description" runat="server" placeholder="Detailed description of vinyl record, including the media condition, jacket condition and tracklist." />
+                        <asp:TextBox ID="TB_Description" runat="server" placeholder="Detailed description of vinyl record, including the media condition, jacket condition and tracklist." TextMode="MultiLine"/>
                     </fieldset>
 
                     <div class="submit-container">
