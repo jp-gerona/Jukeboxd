@@ -26,31 +26,31 @@
                 <i class="ri-search-line"></i>
             </asp:Panel>
 
-      <div class="customer-links">
-        <a href="./Profile.aspx" class="btn btn-primary">Profile</a>
-        <a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a>
-      </div>
-    </nav>
+            <div class="customer-links">
+                <a href="./Profile.aspx" class="btn btn-primary">Profile</a>
+                <a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a>
+            </div>
+        </nav>
 
-    <nav class="nav-bar-squished">
-      <div class="nav-squished-container-1">
-        <a href="./Home.aspx" class="site-logo" id="logo2">
-          <img src="../images/logo/Jukeboxd-full.svg" alt="Jukeboxd Logo" />
-        </a>
+        <nav class="nav-bar-squished">
+            <div class="nav-squished-container-1">
+                <a href="./Home.aspx" class="site-logo" id="logo2">
+                    <img src="../images/logo/Jukeboxd-full.svg" alt="Jukeboxd Logo" />
+                </a>
 
-        <div class="customer-links"><a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a></div>
-      </div>
+                <div class="customer-links"><a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a></div>
+            </div>
 
-      <div class="nav-squished-container-2">
-        <asp:Panel runat="server" CssClass="search-bar" ID="searchBarSquished">
-          <asp:TextBox runat="server" Placeholder="Search for vinyl records" />
-          <i class="ri-search-line"></i>
-        </asp:Panel>
-        <div class="customer-links">
-          <a href="./Profile.aspx" class="btn btn-primary">Profile</a>
-        </div>
-      </div>
-    </nav>
+            <div class="nav-squished-container-2">
+                <asp:Panel runat="server" CssClass="search-bar" ID="searchBarSquished">
+                    <asp:TextBox runat="server" Placeholder="Search for vinyl records" />
+                    <i class="ri-search-line"></i>
+                </asp:Panel>
+                <div class="customer-links">
+                    <a href="./Profile.aspx" class="btn btn-primary">Profile</a>
+                </div>
+            </div>
+        </nav>
         <main id="main1" runat="server">
             <section class="banner">
                 <img src="../images/logo/Jukeboxd-banner.jpeg" />
@@ -60,23 +60,31 @@
             <div class="marquee">
                 <div class="marquee-content scroll">
                     <div>
-                        <img src="../images/logo/Warner-logo.svg" /></div>
+                        <img src="../images/logo/Warner-logo.svg" />
+                    </div>
                     <div>
-                        <img src="../images/logo/Sony-logo.svg" /></div>
+                        <img src="../images/logo/Sony-logo.svg" />
+                    </div>
                     <div>
-                        <img src="../images/logo/Atlantic-logo.svg" /></div>
+                        <img src="../images/logo/Atlantic-logo.svg" />
+                    </div>
                     <div>
-                        <img src="../images/logo/Jukeboxd-text-black.svg" /></div>
+                        <img src="../images/logo/Jukeboxd-text-black.svg" />
+                    </div>
                 </div>
                 <div class="marquee-content scroll">
                     <div>
-                        <img src="../images/logo/Warner-logo.svg" /></div>
+                        <img src="../images/logo/Warner-logo.svg" />
+                    </div>
                     <div>
-                        <img src="../images/logo/Sony-logo.svg" /></div>
+                        <img src="../images/logo/Sony-logo.svg" />
+                    </div>
                     <div>
-                        <img src="../images/logo/Atlantic-logo.svg" /></div>
+                        <img src="../images/logo/Atlantic-logo.svg" />
+                    </div>
                     <div>
-                        <img src="../images/logo/Jukeboxd-text-black.svg" /></div>
+                        <img src="../images/logo/Jukeboxd-text-black.svg" />
+                    </div>
                 </div>
             </div>
 
@@ -86,23 +94,7 @@
                     <p>New arrivals and restocks</p>
                 </header>
 
-                <div runat="server" ID="recordsgrid" class="records-grid">
-
-                    <!-- Example of record card -->
-                    <%--<a href="./Record.aspx" class="record-card">
-                        <img src="../images/vinyls/thriller-michaeljackson.png" />
-                        <div class="record-card-content">
-                            <h3 class="cover">Thriller</h3>
-                            <span class="artist">Michael Jackson</span>
-                            <span class="price">
-                                <div class="price-container">&#8369; 2,499.00</div>
-                            </span>
-                        </div>
-                    </a>--%>
-
-                    <!-- Rest are to fill out grid -->
-                    <!-- Repeat your record cards here -->
-
+                <div runat="server" id="recordsgrid" class="records-grid">
                 </div>
             </section>
 
@@ -123,12 +115,11 @@
             <footer>
                 <p>Copyright &copy; 2024 Orbit.</p>
                 <button class="btn btn-accent"
-          type="button"
-          aria-label="Change to light theme"
-          ID="themeButton">
-          <i class="ri-sun-fill"></i>
-        </button>
-                <%--<asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" ClientIDMode="Static" type="button" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />--%>
+                    type="button"
+                    aria-label="Change to light theme"
+                    id="themeButton">
+                    <i class="ri-sun-fill"></i>
+                </button>
             </footer>
         </main>
     </form>

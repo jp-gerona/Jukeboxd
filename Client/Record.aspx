@@ -61,41 +61,19 @@
             <section class="record-full-details">
                 <div class="record-info">
                     <div class="cover-container">
-                        <asp:Image ID="recordImage" runat="server" ImageUrl="../images/vinyls/thriller-michaeljackson.png" AlternateText="Album Picture" />
+                        <asp:Image ID="recordImage" runat="server" AlternateText="Album Picture" />
                     </div>
-                    <h2 class="record-name">Thriller</h2>
-                    <h3 class="artist">Michael Jackson</h3>
-                    <h4 class="genre">Disco</h4>
-                    <span class="description">Michael Jackson - Thriller
-                    <br />
-                        <br />
-                        Track Listings
-                    <br />
-                        Wanna Be Startin' Somethin'
-                    <br />
-                        Baby Be Mine
-                    <br />
-                        The Girl Is Mine - Michael Jackson with Paul McCartney
-                    <br />
-                        Thriller
-                    <br />
-                        Beat It
-                    <br />
-                        Billie Jean
-                    <br />
-                        Human Nature
-                    <br />
-                        P.Y.T. (Pretty Young Thing)
-                    <br />
-                        The Lady in My Life
-                    </span>
+                    <h2 class="recordname" runat="server" id="recordname"></h2>
+                    <h3 class="H_artist" runat="server" id="H_artist"></h3>
+                    <h4 class="genre" runat="server" id="genre"></h4>
+                    <span class="description" runat="server" id="description"></span>
                 </div>
                 <div class="record-price">
                     <div class="addtocartform">
                         <div class="price-label">
                             <div class="price">
-                                <h4>Total Price:</h4>
-                                <div class="price-container">&#8369; 2,499.00</div>
+                                <h4 class="totalPrice" runat="server" id="totalPrice">Total Price:</h4>
+                                <div class="pricecontainer" id="pricecontainer"></div>
                             </div>
                         </div>
                         <asp:DropDownList ID="quantityDropdown" runat="server">

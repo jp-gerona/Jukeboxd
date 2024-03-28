@@ -33,8 +33,9 @@ namespace MP2_IT114L.Client
                 // Create a new record card
                 var recordCard = new HtmlGenericControl("a");
                 recordCard.Attributes["class"] = "record-card";
-                recordCard.Attributes["href"] = "./Record.aspx";
+                string recordUrl = $"./Record.aspx?title={Server.UrlEncode(record.ProductName)}&artist={Server.UrlEncode(record.Artist)}&price={Server.UrlEncode(record.Price.ToString())}";
 
+                recordCard.Attributes["href"] = recordUrl;
                 // Create image element
                 var img = new HtmlGenericControl("img");
 

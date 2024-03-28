@@ -110,11 +110,8 @@
     <Content Include="Styles\general.css" />
     <Content Include="Scripts\theme.js" />
     <Content Include="UpgradeLog.htm" />
-    <Content Include="UserPage-Profile.aspx" />
     <Content Include="Web.config" />
-    <Content Include="Index.aspx" />
     <Content Include="Admin\Signup-Admin.aspx" />
-    <Content Include="CartTable.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin\New-Product.aspx.cs">
@@ -194,13 +191,6 @@
     <Compile Include="App_Code\Orders\Order.cs" />
     <Compile Include="App_Code\Orders\OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Signup-Admin.aspx.cs">
       <DependentUpon>Signup-Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,20 +214,6 @@
     </Compile>
     <Compile Include="Client\Record.aspx.designer.cs">
       <DependentUpon>Record.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserPage-Profile.aspx.cs">
-      <DependentUpon>UserPage-Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserPage-Profile.aspx.designer.cs">
-      <DependentUpon>UserPage-Profile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CartTable.aspx.cs">
-      <DependentUpon>CartTable.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CartTable.aspx.designer.cs">
-      <DependentUpon>CartTable.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
