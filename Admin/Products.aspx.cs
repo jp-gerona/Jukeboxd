@@ -15,7 +15,7 @@ namespace MP2_IT114L
         {
             if (Session["LoggedInUserEmail"] == null)
             {
-                Response.Redirect("./Login-Admin.aspx");
+                Response.Redirect("~/Login.aspx");
             }
             // Fetch data from the database for the current page
             var RecordRepository = new RecordRepository();

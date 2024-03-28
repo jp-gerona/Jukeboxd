@@ -13,7 +13,7 @@ namespace MP2_IT114L.Admin
         {
             if (Session["LoggedInUserEmail"] == null)
             {
-                Response.Redirect("./Login-Admin.aspx");
+                Response.Redirect("~/Login.aspx");
             }
 
             var OrderRepository = new OrderRepository();
