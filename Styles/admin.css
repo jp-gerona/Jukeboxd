@@ -128,57 +128,6 @@ footer {
     align-items: center;
 }
 
-/* *Table Styles */
-.table-container {
-    width: 100%;
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    min-width: 950px;
-    table-layout: auto;
-    border-collapse: separate;
-    border-spacing: 0;
-    background-color: var(--container);
-    border-top: var(--border-2) var(--filled);
-    border-left: var(--border-2) var(--filled);
-    border-right: var(--border-2) var(--filled);
-    border-radius: var(--border-radius);
-}
-
-th, td {
-    padding: 1rem;
-    text-align: left;
-    white-space: nowrap;
-}
-
-th {
-    font-weight: 550;
-    border-bottom: var(--border-2) var(--filled);
-}
-
-td {
-    border-bottom: var(--border-2) var(--filled);
-}
-
-    td img {
-        width: 6rem;
-        height: 6rem;
-        object-fit: cover;
-        border: var(--border-2) var(--filled);
-        margin-right: 0.8rem;
-        vertical-align: middle;
-    }
-
-    td.amount {
-        font-weight: 550;
-    }
-
-    td.action {
-        text-align: center;
-    }
-
 #form_add_product .submit-container {
     width: 100%;
     display: flex;

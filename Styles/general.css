@@ -10,9 +10,7 @@
     --border-2: 2px solid;
     --border-radius: 0.25rem;
     --border-alpha: rgba(221, 221, 221, 0.5);
-}
-
-[data-theme="light"] {
+    /*Light Mode*/
     --filled: var(--black);
     --background: #f9f5f1;
     --container: var(--white);
@@ -23,7 +21,7 @@
     --danger: #ea9794;
 }
 
-[data-theme="dark"] {
+.dark-mode {
     --filled: var(--gray);
     --background: #161717;
     --container: var(--black);
@@ -223,7 +221,7 @@ fieldset .image-upload {
 }
 
 a.link {
-    color: var(--black);
+    color: var(--filled);
     transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
     text-decoration: underline;
 }
