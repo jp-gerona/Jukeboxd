@@ -27,14 +27,14 @@
       </asp:Panel>
 
       <div class="customer-links">
-        <a href="./profile.html" class="btn btn-primary">Profile</a>
+        <a href="./Profile.aspx" class="btn btn-primary">Profile</a>
         <a href="../CartTable.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a>
       </div>
     </nav>
 
     <nav class="nav-bar-squished">
       <div class="nav-squished-container-1">
-        <a href="./home.html" class="site-logo" id="logo2">
+        <a href="./Home.aspx" class="site-logo" id="logo2">
           <img src="../images/logo/Jukeboxd-full-dark.svg" alt="Jukeboxd Logo" />
         </a>
 
@@ -47,7 +47,7 @@
           <i class="ri-search-line"></i>
         </asp:Panel>
         <div class="customer-links">
-          <a href="./profile.html" class="btn btn-primary">Profile</a>
+          <a href="./Profile.aspx" class="btn btn-primary">Profile</a>
         </div>
       </div>
     </nav>
@@ -114,12 +114,11 @@
       <footer>
         <p>Copyright &copy; 2024 Orbit.</p>
         <button class="btn btn-accent"
-          type="button"
-          data-theme-toggle
-          aria-label="Change to light theme"
-          id="theme">
-          <i class="ri-sun-fill"></i>
-        </button>
+  type="button"
+  aria-label="Change to light theme"
+  ID="themeButton">
+  <i class="ri-sun-fill"></i>
+</button>
       </footer>
     </main>
   </form>
