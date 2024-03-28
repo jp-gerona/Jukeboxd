@@ -101,6 +101,7 @@
     <Content Include="Images\vinyls\raise-earthwindfire.jpeg" />
     <Content Include="Images\vinyls\streettalk-steveperry.jpeg" />
     <Content Include="Images\vinyls\thriller-michaeljackson.png" />
+    <Content Include="Client\Record.aspx" />
     <Content Include="Scripts\customer.js" />
     <Content Include="Scripts\admin.js" />
     <Content Include="Styles\admin.css" />
@@ -147,6 +148,7 @@
     <Compile Include="App_Code\Users\UserProfile.cs" />
     <Compile Include="App_Code\Users\UserRepository.cs" />
     <Compile Include="App_Code\Cart\CartRepository.cs" />
+    <Compile Include="App_Code\Cart\Cart.cs" />
     <Compile Include="Client\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +218,13 @@
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Users\User.cs" />
+    <Compile Include="Client\Record.aspx.cs">
+      <DependentUpon>Record.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Record.aspx.designer.cs">
+      <DependentUpon>Record.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage-Profile.aspx.cs">
       <DependentUpon>UserPage-Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

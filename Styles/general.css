@@ -54,6 +54,7 @@ h4 {
 
 h5 {
     font-size: 1.250rem;
+    font-weight: 500;
 }
 
 small {
@@ -128,11 +129,23 @@ i {
     color: var(--white);
 }
 
-    .btn-primary:hover {
+.btn-secondary {
+    background-color: var(--filled);
+    border: 2px solid var(--filled);
+    color: var(--white);
+}
+
+    .btn-secondary:hover {
         background-color: var(--accent);
         border: 2px solid var(--filled);
         color: var(--black);
     }
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    border: 2px solid var(--filled);
+    color: var(--black);
+}
 
 .btn-accent {
     background-color: var(--accent);
@@ -226,9 +239,14 @@ a.link {
     text-decoration: underline;
 }
 
-.link:hover {
-    color: var(--accent);
+.link {
+    text-decoration: underline;
+    cursor: pointer;
 }
+
+    .link:hover {
+        color: var(--accent);
+    }
 
 .icon {
     font-size: 1.25rem;
