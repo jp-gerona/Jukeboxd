@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -8,7 +9,12 @@ namespace MP2_IT114L.App_Code.Users
     public class UserProfile
     {
         //Replace connectionString according to server            
-        private string connectionString = @"Data Source=DESKTOP-0K7H8FH;Initial Catalog=mystore;Integrated Security=True";
+        private readonly string connectionString;
+
+        public UserProfile()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
+        }
 
         public List<User> GetAccountsByEmail(string email)
         {
