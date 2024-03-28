@@ -61,7 +61,7 @@
                     <a class="site-logo" href="./home.html">
                         <img src="../images/logo/Jukeboxd-full.svg" alt="Jukeboxd Logo" />
                     </a>
-                    <a class="link" href="../Client/Login-Client.aspx">Log in</a>
+                    <a class="link" href="../Login.aspx">Log in</a>
                 </header>
                 <h2>Join now to buy vinyl records!</h2>
                 <fieldset>
@@ -88,7 +88,7 @@
                     <asp:Button ID="CreateAccount" runat="server" Text="Create Account" OnClientClick="return validateForm()" OnClick="CreateAccount_Click" CssClass="btn btn-primary"/>
                 </fieldset>                
                 <asp:Label ID="LblAccountId" runat="server" Text=""></asp:Label>
-                <a href="Login-Client.aspx">Back to Login</a>
+                <a href="../Login.aspx">Back to Login</a>
             </div>
             <div class="signup-background-container"></div>
         </main>
