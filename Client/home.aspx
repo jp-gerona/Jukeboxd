@@ -51,49 +51,6 @@
         </div>
       </div>
     </nav>
-
-    <main id="main1" runat="server">
-      <section class="banner">
-        <img src="../images/logo/Jukeboxd-banner.jpeg" />
-        <h1>The best <span>vinyl</span> out there.</h1>
-      </section>
-
-      <div class="marquee">
-        <div class="marquee-content scroll">
-          <div><img src="../images/logo/Warner-logo.svg" /></div>
-          <div><img src="../images/logo/Sony-logo.svg" /></div>
-          <div><img src="../images/logo/Atlantic-logo.svg" /></div>
-          <div><img src="../images/logo/Jukeboxd-text-black.svg" /></div>
-        </div>
-        <div class="marquee-content scroll">
-          <div><img src="../images/logo/Warner-logo.svg" /></div>
-          <div><img src="../images/logo/Sony-logo.svg" /></div>
-          <div><img src="../images/logo/Atlantic-logo.svg" /></div>
-          <div><img src="../images/logo/Jukeboxd-text-black.svg" /></div>
-        </div>
-      </div>
-
-      <section class="records">
-        <header>
-          <h2>The collection.</h2>
-          <p>New arrivals and restocks</p>
-        </header>
-
-        <div class="records-grid">
-
-          <!-- Example of record card -->
-          <a href="./record.html" class="record-card">
-            <img src="../images/vinyls/thriller-michaeljackson.png" />
-            <div class="record-card-content">
-              <h3 class="cover">Thriller</h3>
-              <span class="artist">Michael Jackson</span>
-              <span class="price"><div class="price-container">&#8369; 2,499.00</div></span>
-            <div class="customer-links">
-                    <a href="./profile.html" class="btn btn-primary">Profile</a>
-                </div>
-            </div>
-        </nav>
-
         <main id="main1" runat="server">
             <section class="banner">
                 <img src="../images/logo/Jukeboxd-banner.jpeg" />
