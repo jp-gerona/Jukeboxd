@@ -126,7 +126,7 @@
 
             <footer>
                 <p>Copyright &copy; <%: DateTime.Now.Year %> Orbit.</p>
-                <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" ClientIDMode="Static" type="button" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
+                <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" aria-label="Toggle theme" OnClientClick="return false;" Text="&#xF1BC;" />
             </footer>
         </main>
 
