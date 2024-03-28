@@ -647,3 +647,115 @@ footer button {
         right: 1rem;
     }
 }
+
+/* *CHECKOUT */
+/* --------------------------------------------------------------------------------------------------- */
+.main-checkout header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    border-bottom: var(--border-2) var(--filled);
+}
+
+.checkout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+.records-summary:first-child {
+    border-top: var(--border-2) var(--filled);
+}
+
+.record-container {
+    display: flex;
+    background-color: var(--container);
+    border-left: var(--border-2) var(--filled);
+    border-right: var(--border-2) var(--filled);
+    border-bottom: var(--border-2) var(--filled);
+    overflow: hidden;
+}
+
+    .record-container .record-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .record-container .record-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .record-container .record-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+.cart-summary .cover-container {
+    width: 175px;
+    height: 175px;
+    border-right: 2px solid var(--filled);
+}
+
+.cart-summary img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
+
+.cart-summary .summary-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--container);
+    border-left: var(--border-2) var(--filled);
+    border-right: var(--border-2) var(--filled);
+    border-bottom: var(--border-2) var(--filled);
+}
+
+.billing-address {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container);
+    border: var(--border-2) var(--filled);
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+    .billing-address h4 {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .billing-address fieldset {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+        border-bottom: var(--border-2) var(--filled);
+        margin: 0;
+    }
+
+    .billing-address .submit-container {
+        padding: 1rem;
+    }
+
+#checkout-form .submit-container button {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .checkout {
+        grid-template-columns: 1fr;
+        padding: 1rem 2rem;
+    }
+}
