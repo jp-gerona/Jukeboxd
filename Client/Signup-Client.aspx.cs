@@ -28,7 +28,7 @@ namespace MP2_IT114L
             else
             {
                 userRepository.CreateUser(name, email, password, address, type);
-                Response.Redirect("Login-Client.aspx");
+                Response.Redirect("~/Login.aspx");
             }
         }
     }
