@@ -6,23 +6,23 @@ It is your one-stop shop for everything vinyl. Whether you're a collector search
 
 ## Details regarding the creation of the website:
 
-### How to configure the project?
+### 1. How to configure the project?
 
 For you to start, you must have access to the project. Then, upon opening the project, you would be unable to access the site until you have established the database. To do so, you must find the "App_Data" folder and check for the database "mystore.mdf". Once you found the database, you would need to remove the folder with it and recreate the database in order for you to properly access it.
 
 Once you have recreated the folder "App_Data" and database "mystore.mdf", you would need insert its contents through a new query and manually create four tables consisting of the accounts, records, cart, and orderlog. (Refer to the Jukeboxd-SQL-Statements.md file to insert the elements in the query).
 
-### How to run the project?
+### 2. How to run the project?
 
 After inserting the elements/entities, you can proceed to open the asp file "home.aspx" to get started. Afterwards, once the home asp file is open on the screen, you may start the application using the option "ISS Express (Browser type)" to run the website.
 
-### Architecture of the project?
+### 3. Architecture of the project?
 
 The overall structure is based on a website/e-commerce platform meant to sell a specific product for a target base of collectors and music-loving users. The website is split up into four sections that cover different retrievals and manipulation of the data. Jukeboxd features To handle users and handle integrity of the client's data, to publish and sell records based on specific interests, to allow the client to cart their orders and record purchases based on their activity. Then there are two types of users with different interfaces depending on the user. The first includes the admin account to handle both user accounts and artists' albums/records. Then the users can initially browse the site's homepage and search for anything of their interests. And are given the option to create an account to start purchasing. The code is ordered based on specific and organized data composed of the site's architecture. Including that of the Admin and Client type users that feature different prompts that are dependent on their type. The App_Code where specifically holds conditions and queries to hold the data of the users and manipulate the data to the database which is located in the App_Data folder.
 
 In addition, the project has also separated instances such as the image resources of the site, scripts that handle the functionality of certain components of the site, and styles that shape the look of the website, inspired by the "new brutalism" style.
 
-### Features of the project?
+### 4. Features of the project?
 
 Jukeboxd introduces several features that allow the customer to explore and find records of their interests. By browsing through the homepage, they would be able to things that they take an interest from. (Home)
 
