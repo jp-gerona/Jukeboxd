@@ -28,7 +28,7 @@
 
       <div class="customer-links">
         <a href="./Profile.aspx" class="btn btn-primary">Profile</a>
-        <a href="../CartTable.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a>
+        <a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a>
       </div>
     </nav>
 

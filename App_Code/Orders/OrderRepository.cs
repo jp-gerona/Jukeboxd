@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Configuration;
+using MP2_IT114L.Admin;
 
 namespace MP2_IT114L
 {
@@ -57,6 +58,38 @@ namespace MP2_IT114L
                 return Enumerable.Empty<Order>();
             }
         }
+        public List<string> GetUserOrders(string accountId)
+        {
+            List<string> orderList = new List<string>();
 
+                using (var connection = new SqlConnection(connectionString))
+                using (var command = connection.CreateCommand())
+                {
+                    connection.Open();
+                    command.CommandText =
+                        "SELECT Date_Ordered, Account_Id, Quantity, Subtotal, Record_Image, Record_Name " +
+                        "FROM OrderLog " +
+                        "INNER JOIN Record ON OrderLog.Product_Id = Record.Product_Id " +
+                        "WHERE Account_Id = @Account_Id " +
+                        "ORDER BY Date_Ordered ASC ";
+                    command.Parameters.AddWithValue("@Account_Id", accountId);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            orderList.Add(reader["Date_Ordered"].ToString());
+                            orderList.Add(reader["Record_Image"].ToString());
+                            orderList.Add(reader["Record_Name"].ToString());
+                            orderList.Add(reader["Quantity"].ToString());
+                            orderList.Add(reader["Subtotal"].ToString());
+                        }
+
+                    connection.Close();
+                }
+                    return orderList;
+                
+
+            }
+        }
     }
 }

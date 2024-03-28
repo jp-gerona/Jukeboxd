@@ -28,7 +28,7 @@
 
             <div class="customer-links">
                 <a href="./profile.aspx" class="btn btn-primary">Profile</a>
-                <a href="../CartTable.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a>
+                <a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a>
             </div>
         </nav>
 
@@ -77,13 +77,13 @@
                                     <asp:TableHeaderCell>Subtotal</asp:TableHeaderCell>
                                 </asp:TableHeaderRow>
                                 <asp:TableRow>
-                                    <asp:TableCell>March 26, 2024</asp:TableCell>
-                                    <asp:TableCell>
+                                    <asp:TableCell ID="date">March 26, 2024</asp:TableCell>
+                                    <asp:TableCell ID="name">
                                         <asp:Image ID="imgProduct" runat="server" ImageUrl="../images/vinyls/thriller-michaeljackson.png" />
                                         Thriller
                                     </asp:TableCell>
-                                    <asp:TableCell>2</asp:TableCell>
-                                    <asp:TableCell CssClass="amount">&#8369; 4998.00</asp:TableCell>
+                                    <asp:TableCell ID="quantity">2</asp:TableCell>
+                                    <asp:TableCell ID="totalPrice" CssClass="amount">&#8369; 4998.00</asp:TableCell>
                                 </asp:TableRow>
                             </asp:Table>
 
