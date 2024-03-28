@@ -487,7 +487,7 @@ section {
         width: 80%;
     }
 
-.record-price .addtocartform button {
+.addtocartform #addtocartform {
     border: var(--border-2) var(--filled);
     align-self: center;
     margin: 1rem 2rem;

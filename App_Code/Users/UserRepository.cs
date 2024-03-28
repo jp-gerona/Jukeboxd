@@ -17,7 +17,7 @@ namespace MP2_IT114L.App_Code.Users
         {
             connectionString = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
         }
-        public void CreateUser(string name, string email, string password, string address, string type)
+            public void CreateUser(string name, string email, string password, string address, string type)
         {
 
             using (var connection = new SqlConnection(connectionString))
