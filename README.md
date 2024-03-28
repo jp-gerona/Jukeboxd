@@ -26,25 +26,25 @@ In addition, the project has also separated instances such as the image resource
 
 Jukeboxd introduces several features that allow the customer to explore and find records of their interests. By browsing through the homepage, they would be able to things that they take an interest from. (Home)
 
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/0c66bcc9-c139-4a71-aee0-e26a3135261f" alt="1(1)" width="200"> 
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/0c66bcc9-c139-4a71-aee0-e26a3135261f" alt="1(1)" width="800"> 
 
 Then they would be able to access the profile page where they would be first redirected to the login page to sign or enter the website using their created account. (Login/Signup)
 
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/da74abe9-6e11-4937-8919-5ac499bc2d62" alt="1(2)" width="200">
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/58565ed4-3717-45ce-ad1d-3ca631cddb41" alt="1(3)" width="200">
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/2b395143-aa98-416f-8079-ad3d379a0ce5" alt="1(4)" width="200">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/da74abe9-6e11-4937-8919-5ac499bc2d62" alt="1(2)" width="800">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/58565ed4-3717-45ce-ad1d-3ca631cddb41" alt="1(3)" width="800">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/2b395143-aa98-416f-8079-ad3d379a0ce5" alt="1(4)" width="800">
 
 Once the customer logs in, they may proceed to choose and add their product to their cart and checkout once they are done. (Product/Cart)
 
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/430625ca-93a5-473e-bf13-555830c1701f" alt="1(5)" width="200">
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/3d6423a7-3231-4784-b6cf-a3f8f58b7c9d" alt="1(6)" width="200">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/430625ca-93a5-473e-bf13-555830c1701f" alt="1(5)" width="800">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/3d6423a7-3231-4784-b6cf-a3f8f58b7c9d" alt="1(6)" width="800">
 
 On the other hand, the administrator would be greeted with an interface where they can access, add, and manipulate all of the products or records that our partnered companies provide, and handle all of the users through the database of the website. (Admin)
 
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/b25e401e-deef-4528-a620-64267793255e" alt="2(1)" width="200">
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/2ea1796e-2550-4968-a94d-c73b0939499c" alt="2(2)" width="200">
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/f1cf5e38-c8f4-48c2-a93f-2825de179253" alt="2(3)" width="200">
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/1f45e08f-4329-4f1f-a79e-750be34ab826" alt="2(4)" width="200">
-<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/be476c8d-23f2-4c41-b599-b009988d072a" alt="2(5)" width="200">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/b25e401e-deef-4528-a620-64267793255e" alt="2(1)" width="800">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/2ea1796e-2550-4968-a94d-c73b0939499c" alt="2(2)" width="800">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/f1cf5e38-c8f4-48c2-a93f-2825de179253" alt="2(3)" width="800">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/1f45e08f-4329-4f1f-a79e-750be34ab826" alt="2(4)" width="800">
+<img src="https://github.com/cfd-alcantara/Jukeboxd/assets/154480145/be476c8d-23f2-4c41-b599-b009988d072a" alt="2(5)" width="800">
 
 
