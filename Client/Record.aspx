@@ -28,7 +28,7 @@
             </asp:Panel>
 
             <div class="customer-links">
-                <asp:HyperLink ID="profileLink" runat="server" CssClass="btn btn-primary" NavigateUrl="./profile.html">Profile</asp:HyperLink>
+                <asp:HyperLink ID="profileLink" runat="server" CssClass="btn btn-primary" NavigateUrl="./Profile.aspx">Profile</asp:HyperLink>
                 <asp:HyperLink ID="checkoutLink" runat="server" CssClass="btn btn-primary">
             <i class="ri-shopping-cart-2-fill"></i><span>0</span>
                 </asp:HyperLink>
@@ -37,7 +37,7 @@
 
         <nav class="nav-bar-squished">
             <div class="nav-squished-container-1">
-                <asp:HyperLink ID="logo2" runat="server" CssClass="site-logo" NavigateUrl="./home.html">
+                <asp:HyperLink ID="logo2" runat="server" CssClass="site-logo" NavigateUrl="./home.aspx">
                     <asp:Image ID="logoImage2" runat="server" ImageUrl="../images/logo/Jukeboxd-full.svg" AlternateText="Jukeboxd Logo" />
                 </asp:HyperLink>
 
@@ -52,7 +52,7 @@
                 <asp:TextBox ID="searchBox2" runat="server" placeholder="Search for vinyl records"></asp:TextBox>
                 <i class="ri-search-line"></i>
                 <div class="customer-links">
-                    <asp:HyperLink ID="profileLink2" runat="server" CssClass="btn btn-primary" NavigateUrl="./profile.html">Profile</asp:HyperLink>
+                    <asp:HyperLink ID="profileLink2" runat="server" CssClass="btn btn-primary" NavigateUrl="./Profile.aspx">Profile</asp:HyperLink>
                 </div>
             </div>
         </nav>
