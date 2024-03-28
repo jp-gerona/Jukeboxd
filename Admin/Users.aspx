@@ -108,9 +108,9 @@
 
 
                 <div class="pagination">
-                    <asp:Button ID="PrevButton" runat="server" CssClass="btn asp-prev ri-arrow-left-s-line" Text='&#xEA64; Prev' Enabled="false" />
-                    <span class="asp-page-info" runat="server">Page 1 of 10</span>
-                    <asp:Button ID="NextButton" runat="server" CssClass="btn asp-next ri-arrow-right-s-line" Text='&#xEA6E; Next' />
+                    <asp:Button ID="PrevButton" runat="server" CssClass="btn asp-prev ri-arrow-left-s-line" Text='&#xEA64; Prev' OnClick="PreviousUser_Click" />
+                    <span class="asp-page-info" runat="server" id="UserInfoSpan">Page 1 of 10</span>
+                    <asp:Button ID="NextButton" runat="server" CssClass="btn asp-next ri-arrow-right-s-line" Text='&#xEA6E; Next' OnClick="NextUser_Click"/>
                 </div>
             </section>
 
