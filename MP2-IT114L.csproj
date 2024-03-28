@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="Admin\Login-Admin.aspx" />
     <Content Include="Admin\New-Product.aspx" />
     <Content Include="Admin\Orders.aspx" />
     <Content Include="Admin\Users.aspx" />
@@ -78,7 +77,7 @@
     <Content Include="App_Data\mystore_log.ldf">
       <DependentUpon>mystore.mdf</DependentUpon>
     </Content>
-    <Content Include="Client\Login-Client.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Client\Signup-Client.aspx" />
     <Content Include="Admin\Products.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
@@ -137,20 +136,13 @@
     </Compile>
     <Compile Include="App_Code\Users\UserProfile.cs" />
     <Compile Include="App_Code\Users\UserRepository.cs" />
-    <Compile Include="Admin\Login-Admin.aspx.cs">
-      <DependentUpon>Login-Admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Login-Admin.aspx.designer.cs">
-      <DependentUpon>Login-Admin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Code\Cart\CartRepository.cs" />
-    <Compile Include="Client\Login-Client.aspx.cs">
-      <DependentUpon>Login-Client.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Client\Login-Client.aspx.designer.cs">
-      <DependentUpon>Login-Client.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

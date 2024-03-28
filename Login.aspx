@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login-Client.aspx.cs" Inherits="MP2_IT114L.Login_Client" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="MP2_IT114L.Login_Client" %>
 
 <!DOCTYPE html>
 
