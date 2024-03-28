@@ -561,6 +561,7 @@ section {
         width: 5rem;
     }
 }
+
 /* *PROFILE */
 /* --------------------------------------------------------------------------------------------------- */
 .profile {
@@ -578,71 +579,14 @@ section {
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 0.8rem;
-}
-
-.profile-details {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    background-color: var(--container);
-    border: var(--border-2) var(--filled);
-    border-radius: var(--border-radius);
-    transition-property: transform, box-shadow;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 0.15s;
-}
-
-    .profile-details:hover {
-        box-shadow: 0.40rem 0.40rem 0 var(--filled);
-        transform: translate(-0.40rem, -0.40rem);
-    }
-
-    .profile-details h3 {
-        padding: 1rem;
-        margin-bottom: 1rem;
-        border-bottom: var(--border-2) var(--filled);
-    }
-
-    .profile-details span {
-        padding: 1rem;
-    }
-
-
-.profile table {
-    min-width: 300px;
-}
-
-@media screen and (max-width: 1024px) {
-    .profile {
-        padding: 1rem 2rem;
-    }
-
-    .profile-grid {
-        grid-template-columns: 90%;
-    }
-}
-
-
-/* *PROFILE */
-/* --------------------------------------------------------------------------------------------------- */
-.profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 4rem
-}
-
-    .profile h2 {
-        margin-bottom: 2rem;
-    }
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
     gap: 0.8rem;
 }
+
+    .profile-grid button {
+        width: 90%;
+        margin: 1rem;
+    }
 
 .profile-details {
     display: flex;

@@ -35,7 +35,7 @@
     <nav class="nav-bar-squished">
       <div class="nav-squished-container-1">
         <a href="./Home.aspx" class="site-logo" id="logo2">
-          <img src="../images/logo/Jukeboxd-full-dark.svg" alt="Jukeboxd Logo" />
+          <img src="../images/logo/Jukeboxd-full.svg" alt="Jukeboxd Logo" />
         </a>
 
         <div class="customer-links"><a href="./checkout.html" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a></div>

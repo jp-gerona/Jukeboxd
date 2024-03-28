@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
+using System.Web.DynamicData;
 using System.Web.Services.Description;
 
 namespace MP2_IT114L
@@ -133,6 +134,30 @@ namespace MP2_IT114L
                 connection.Close();
             }
 
+        }
+        public List<string> ProfileEmail(string email)
+        {
+            List<string> profileList = new List<string>();
+
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = connection.CreateCommand())
+            {
+                connection.Open();
+                command.CommandText = "SELECT * FROM Account WHERE Email = @Email";
+                command.Parameters.AddWithValue("@Email", email);
+
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        profileList.Add(reader["Account_Id"].ToString());
+                        profileList.Add(reader["Name"].ToString());
+                    }
+
+                    connection.Close();
+                }
+                return profileList;
+            }
         }
     }
 }
