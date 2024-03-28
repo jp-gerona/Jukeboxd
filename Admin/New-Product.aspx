@@ -81,7 +81,7 @@
                         <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="./analytics.html">
                 <div class="nav-link"><i class="ri-bar-chart-fill"></i>Analytics</div>
                         </asp:HyperLink>
-                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="../index.html">
+                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="../Login.html">
                 <div class="nav-link"><i class="ri-logout-box-line"></i>Logout</div>
                         </asp:HyperLink>
                     </div>

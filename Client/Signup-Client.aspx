@@ -58,7 +58,7 @@
         <main id="main-signup">
             <div class="signup-container">
                 <header>
-                    <a class="site-logo" href="./home.html">
+                    <a class="site-logo" href="./home.aspx">
                         <img src="../images/logo/Jukeboxd-full.svg" alt="Jukeboxd Logo" />
                     </a>
                     <a class="link" href="../Login.aspx">Log in</a>

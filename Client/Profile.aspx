@@ -38,7 +38,7 @@
                     <img src="../images/logo/Jukeboxd-full-dark.svg" alt="Jukeboxd Logo" />
                 </a>
 
-                <div class="customer-links"><a href="./checkout.html" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a></div>
+                <div class="customer-links"><a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a></div>
             </div>
 
             <div class="nav-squished-container-2">

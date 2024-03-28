@@ -11,7 +11,6 @@ namespace MP2_IT114L
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -38,7 +38,7 @@
           <img src="../images/logo/Jukeboxd-full.svg" alt="Jukeboxd Logo" />
         </a>
 
-        <div class="customer-links"><a href="./checkout.html" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a></div>
+        <div class="customer-links"><a href="./Checkout.aspx" class="btn btn-primary"><i class="ri-shopping-cart-2-fill"></i><span>0</span></a></div>
       </div>
 
       <div class="nav-squished-container-2">
@@ -89,7 +89,7 @@
                 <div class="records-grid">
 
                     <!-- Example of record card -->
-                    <a href="./record.html" class="record-card">
+                    <a href="./Record.aspx" class="record-card">
                         <img src="../images/vinyls/thriller-michaeljackson.png" />
                         <div class="record-card-content">
                             <h3 class="cover">Thriller</h3>

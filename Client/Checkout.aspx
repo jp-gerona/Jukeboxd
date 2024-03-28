@@ -18,7 +18,7 @@
 <body>
     <form runat="server">
         <nav class="nav-bar">
-            <asp:HyperLink ID="logo" runat="server" NavigateUrl="./home.html" CssClass="site-logo">
+            <asp:HyperLink ID="logo" runat="server" NavigateUrl="./home.aspx" CssClass="site-logo">
                 <asp:Image ID="logoImage" runat="server" ImageUrl="../images/logo/Jukeboxd-full.svg" AlternateText="Jukeboxd Logo" />
             </asp:HyperLink>
 
@@ -28,8 +28,8 @@
             </asp:Panel>
 
             <div class="customer-links">
-                <asp:HyperLink ID="profileLink" runat="server" NavigateUrl="./profile.html" CssClass="btn btn-primary">Profile</asp:HyperLink>
-                <asp:HyperLink ID="checkoutLink" runat="server" NavigateUrl="./checkout.html" CssClass="btn btn-primary">
+                <asp:HyperLink ID="profileLink" runat="server" NavigateUrl="./Profile.aspx" CssClass="btn btn-primary">Profile</asp:HyperLink>
+                <asp:HyperLink ID="checkoutLink" runat="server" NavigateUrl="./Checkout.aspx" CssClass="btn btn-primary">
             <i class="ri-shopping-cart-2-fill"></i><span>0</span>
                 </asp:HyperLink>
             </div>
@@ -37,11 +37,11 @@
 
         <nav class="nav-bar-squished">
             <div class="nav-squished-container-1">
-                <asp:HyperLink ID="logo2" runat="server" NavigateUrl="./home.html" CssClass="site-logo">
+                <asp:HyperLink ID="logo2" runat="server" NavigateUrl="./home.aspx" CssClass="site-logo">
                     <asp:Image ID="logoImage2" runat="server" ImageUrl="../images/logo/Jukeboxd-full-dark.svg" AlternateText="Jukeboxd Logo" />
                 </asp:HyperLink>
                 <div class="customer-links">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="./checkout.html" CssClass="btn btn-primary">
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="./Checkout.aspx" CssClass="btn btn-primary">
                 <i class="ri-shopping-cart-2-fill"></i><span>0</span>
                     </asp:HyperLink>
                 </div>
@@ -53,7 +53,7 @@
                     <i class="ri-search-line"></i>
                 </asp:Panel>
                 <div class="customer-links">
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="./profile.html" CssClass="btn btn-primary">Profile</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="./Profile.aspx" CssClass="btn btn-primary">Profile</asp:HyperLink>
                 </div>
             </div>
         </nav>
@@ -61,7 +61,7 @@
         <main class="main-checkout" id="main1" runat="server">
             <header>
                 <h2>Checkout</h2>
-                <asp:HyperLink runat="server" CssClass="btn btn-accent" NavigateUrl="./home.html">Continue shopping</asp:HyperLink>
+                <asp:HyperLink runat="server" CssClass="btn btn-accent" NavigateUrl="./home.aspx">Continue shopping</asp:HyperLink>
             </header>
 
             <section class="checkout">
