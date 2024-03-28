@@ -97,7 +97,7 @@
             </header>
             <section class="products-section">
                 <div class="table-container">
-                    <asp:Table ID="AspNetTable" CssClass="asp-records-table" runat="server">
+                    <asp:Table ID="T_Order" CssClass="asp-records-table" runat="server">
                         <asp:TableHeaderRow>
                             <asp:TableHeaderCell>Date</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Product</asp:TableHeaderCell>
@@ -105,23 +105,13 @@
                             <asp:TableHeaderCell>Qty.</asp:TableHeaderCell>
                             <asp:TableHeaderCell>Subtotal</asp:TableHeaderCell>
                         </asp:TableHeaderRow>
-                        <asp:TableRow>
-                            <asp:TableCell>March 26, 2024</asp:TableCell>
-                            <asp:TableCell>
-                                <asp:Image ID="ProductImage" runat="server" ImageUrl="https://cdn.discordapp.com/attachments/654336177226252288/1222586091601793145/1950867a87ff6c2199b1917e42e34067.png?ex=6616c106&is=66044c06&hm=abf927c280c6e24b14570a9ba56abebad27186896760c4b610e44c4d4118d504&" />
-                                Super Real Me
-                            </asp:TableCell>
-                            <asp:TableCell>C00000001</asp:TableCell>
-                            <asp:TableCell>2</asp:TableCell>
-                            <asp:TableCell CssClass="amount">&#8369; 4998.00</asp:TableCell>
-                        </asp:TableRow>
                     </asp:Table>
                 </div>
 
                 <div class="pagination">
-                    <button disabled class="btn asp-prev"><i class="ri-arrow-left-s-line"></i>Prev</button>
-                    <span class="asp-page-info">Page 1 of 1</span>
-                    <button disabled class="btn asp-next"><i class="ri-arrow-right-s-line"></i>Next</button>
+                    <asp:Button ID="PrevButton" runat="server" CssClass="btn asp-prev ri-arrow-left-s-line" Text='&#xEA64; Prev' Enabled="false" />
+                    <span class="asp-page-info" runat="server">Page 1 of 10</span>
+                    <asp:Button ID="NextButton" runat="server" CssClass="btn asp-next ri-arrow-right-s-line" Text='&#xEA6E; Next' />
                 </div>
             </section>
 

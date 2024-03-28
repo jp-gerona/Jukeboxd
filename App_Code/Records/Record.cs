@@ -14,7 +14,7 @@ namespace MP2_IT114L
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public string Description { get; set; }
-        public byte[] Record_Image { get; set; }
+        public byte[] RecordImage { get; set; }
 
     }
 }

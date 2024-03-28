@@ -39,14 +39,14 @@ namespace MP2_IT114L
                 TableCell imageAndTextCell = new TableCell();
                 Image imageControl = new Image(); // For the image of the Product
                 // If statement to know if record.Record_Image is null or not
-                if (record.Record_Image != null && record.Record_Image.All(b => b == 0))
+                if (record.RecordImage != null && record.RecordImage.All(b => b == 0))
                 {
                     imageControl.ImageUrl = "../images/vinyls/default.jpg";
                     imageControl.AlternateText = "default.jpg";
                 }
                 else
                 {
-                    byte[] imageData = record.Record_Image;
+                    byte[] imageData = record.RecordImage;
                     string base64String = Convert.ToBase64String(imageData);
                     imageControl.ImageUrl = "data:image/jpeg;base64," + base64String;
                 }

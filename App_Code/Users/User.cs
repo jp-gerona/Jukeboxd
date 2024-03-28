@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 
-namespace MP2_IT114L.App_Code.Users
+namespace MP2_IT114L
 {
     public class User
     {
@@ -12,6 +13,5 @@ namespace MP2_IT114L.App_Code.Users
         public string Password { get; set; }
         public string Address { get; set; }
         public string Type { get; set; }
-
     }
 }
