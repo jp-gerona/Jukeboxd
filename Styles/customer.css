@@ -1,9 +1,5 @@
 ﻿/* *CUSTOMER LOGIN & SIGN-UP */
 /* --------------------------------------------------------------------------------------------------- */
-body {
-    overflow-x: hidden;
-}
-
 #main-login,
 #main-signup {
     display: flex;
@@ -466,7 +462,7 @@ section {
         border: 2px solid var(--filled);
     }
 
-.add-to-cart-form {
+.addtocartform {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -474,35 +470,35 @@ section {
     align-items: flex-start;
 }
 
-    .add-to-cart-form .price-label {
+    .addtocartform .price-label {
         display: flex;
         width: 100%;
         padding: 1rem 2rem;
         border-bottom: var(--border-2) var(--filled);
     }
 
-        .add-to-cart-form .price-label h4 {
+        .addtocartform .price-label h4 {
             margin-bottom: 1rem;
         }
 
-    .add-to-cart-form select {
+    .addtocartform select {
         align-self: center;
         margin: 1rem 2rem;
         width: 80%;
     }
 
-    .add-to-cart-form button {
-        border: var(--border-2) var(--filled);
-        align-self: center;
-        margin: 1rem 2rem;
-        width: 80%;
-    }
+.record-price .addtocartform button {
+    border: var(--border-2) var(--filled);
+    align-self: center;
+    margin: 1rem 2rem;
+    width: 80%;
+}
 
-        .add-to-cart-form button:disabled {
-            background-color: var(--success);
-            color: var(--black);
-            opacity: 0.8;
-        }
+    .record-price .addtocartform button:disabled {
+        background-color: var(--success);
+        color: var(--black);
+        opacity: 0.8;
+    }
 
 @media screen and (max-width: 1024px) {
     .record-full-details {
@@ -510,8 +506,8 @@ section {
         padding: 2rem 4rem;
     }
 
-    .add-to-cart-form select,
-    .add-to-cart-form button {
+    .addtocartform select,
+    .addtocartform button {
         width: 90%;
     }
 }
@@ -579,14 +575,8 @@ section {
 .profile-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    width: 100%;
     gap: 0.8rem;
 }
-
-    .profile-grid button {
-        width: 90%;
-        margin: 1rem;
-    }
 
 .profile-details {
     display: flex;
@@ -651,5 +641,117 @@ footer button {
     footer button {
         bottom: 2rem;
         right: 1rem;
+    }
+}
+
+/* *CHECKOUT */
+/* --------------------------------------------------------------------------------------------------- */
+.main-checkout header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    border-bottom: var(--border-2) var(--filled);
+}
+
+.checkout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+.records-summary:first-child {
+    border-top: var(--border-2) var(--filled);
+}
+
+.record-container {
+    display: flex;
+    background-color: var(--container);
+    border-left: var(--border-2) var(--filled);
+    border-right: var(--border-2) var(--filled);
+    border-bottom: var(--border-2) var(--filled);
+    overflow: hidden;
+}
+
+    .record-container .record-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .record-container .record-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .record-container .record-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+.cart-summary .cover-container {
+    width: 175px;
+    height: 175px;
+    border-right: 2px solid var(--filled);
+}
+
+.cart-summary img {
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+}
+
+.cart-summary .summary-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--container);
+    border-left: var(--border-2) var(--filled);
+    border-right: var(--border-2) var(--filled);
+    border-bottom: var(--border-2) var(--filled);
+}
+
+.billing-address {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container);
+    border: var(--border-2) var(--filled);
+    border-radius: var(--border-radius);
+    width: 100%;
+}
+
+    .billing-address h4 {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .billing-address fieldset {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+        border-bottom: var(--border-2) var(--filled);
+        margin: 0;
+    }
+
+    .billing-address .submit-container {
+        padding: 1rem;
+    }
+
+#checkout-form .submit-container button {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .checkout {
+        grid-template-columns: 1fr;
+        padding: 1rem 2rem;
     }
 }

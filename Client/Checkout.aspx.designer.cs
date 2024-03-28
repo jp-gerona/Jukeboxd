@@ -11,89 +11,80 @@ namespace MP2_IT114L
 {
 
 
-    public partial class Records
+    public partial class Checkout
     {
 
         /// <summary>
-        /// siteLogoLink control.
+        /// logo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink siteLogoLink;
+        protected global::System.Web.UI.WebControls.HyperLink logo;
 
         /// <summary>
-        /// siteLogoImage control.
+        /// logoImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image siteLogoImage;
+        protected global::System.Web.UI.WebControls.Image logoImage;
 
         /// <summary>
-        /// DashboardLink control.
+        /// homeSearchBar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink DashboardLink;
+        protected global::System.Web.UI.WebControls.Panel homeSearchBar;
 
         /// <summary>
-        /// ProductsLink control.
+        /// searchBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink ProductsLink;
+        protected global::System.Web.UI.WebControls.TextBox searchBox;
 
         /// <summary>
-        /// OrdersLink control.
+        /// profileLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink OrdersLink;
+        protected global::System.Web.UI.WebControls.HyperLink profileLink;
 
         /// <summary>
-        /// UsersLink control.
+        /// checkoutLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink UsersLink;
+        protected global::System.Web.UI.WebControls.HyperLink checkoutLink;
 
         /// <summary>
-        /// AnalyticsLink control.
+        /// logo2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink AnalyticsLink;
+        protected global::System.Web.UI.WebControls.HyperLink logo2;
 
         /// <summary>
-        /// LogoutLink control.
+        /// logoImage2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LogoutLink;
-
-        /// <summary>
-        /// TopbarLogo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image TopbarLogo;
+        protected global::System.Web.UI.WebControls.Image logoImage2;
 
         /// <summary>
         /// HyperLink1 control.
@@ -105,6 +96,24 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
 
         /// <summary>
+        /// Panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
+
+        /// <summary>
+        /// TextBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+
+        /// <summary>
         /// HyperLink2 control.
         /// </summary>
         /// <remarks>
@@ -114,102 +123,156 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
 
         /// <summary>
-        /// HyperLink3 control.
+        /// main1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl main1;
 
         /// <summary>
-        /// HyperLink4 control.
+        /// cartSummary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartSummary;
 
         /// <summary>
-        /// HyperLink5 control.
+        /// recordContainer1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink5;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl recordContainer1;
 
         /// <summary>
-        /// HyperLink6 control.
+        /// recordImage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink6;
+        protected global::System.Web.UI.WebControls.Image recordImage1;
 
         /// <summary>
-        /// btnSearch control.
+        /// qty1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSearch;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl qty1;
 
         /// <summary>
-        /// lnkNewProduct control.
+        /// remove1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink lnkNewProduct;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl remove1;
 
         /// <summary>
-        /// T_Products control.
+        /// recordContainer2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table T_Products;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl recordContainer2;
 
         /// <summary>
-        /// PrevButton control.
+        /// recordImage2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button PrevButton;
+        protected global::System.Web.UI.WebControls.Image recordImage2;
 
         /// <summary>
-        /// ProdInfoSpan control.
+        /// qty2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ProdInfoSpan;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl qty2;
 
         /// <summary>
-        /// NextButton control.
+        /// remove2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button NextButton;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl remove2;
 
         /// <summary>
-        /// themeButton control.
+        /// recordContainer3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button themeButton;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl recordContainer3;
+
+        /// <summary>
+        /// recordImage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image recordImage3;
+
+        /// <summary>
+        /// qty3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl qty3;
+
+        /// <summary>
+        /// remove3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl remove3;
+
+        /// <summary>
+        /// totalAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalAmount;
+
+        /// <summary>
+        /// address control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox address;
+
+        /// <summary>
+        /// checkoutButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button checkoutButton;
     }
 }
