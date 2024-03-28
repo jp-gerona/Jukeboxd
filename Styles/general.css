@@ -10,6 +10,7 @@
     --border-2: 2px solid;
     --border-radius: 0.25rem;
     --border-alpha: rgba(221, 221, 221, 0.5);
+    /*Light Mode*/
     --filled: var(--black);
     --background: #f9f5f1;
     --container: var(--white);
@@ -19,7 +20,6 @@
     --success: #9ee7ad;
     --danger: #ea9794;
 }
-
 
 .dark-mode {
     --filled: var(--gray);
