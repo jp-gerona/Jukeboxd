@@ -35,3 +35,4 @@ themeButton.addEventListener('click', () => {
 
 // Update the logos on page load
 window.addEventListener('load', updateLogos);
+

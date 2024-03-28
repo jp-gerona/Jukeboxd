@@ -23,7 +23,7 @@
             <div class="nav-links">
                 <div>
                     <asp:HyperLink ID="DashboardLink" runat="server" NavigateUrl="./dashboard.aspx">
-                <div class="nav-link active">
+                <div class="nav-link active">A
                     <i class="ri-dashboard-2-fill"></i>Dashboard
                 </div>
                     </asp:HyperLink>
