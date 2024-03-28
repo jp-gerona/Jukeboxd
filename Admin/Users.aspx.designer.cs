@@ -168,6 +168,15 @@ namespace MP2_IT114L.Admin
         protected global::System.Web.UI.WebControls.Button PrevButton;
 
         /// <summary>
+        /// UserInfoSpan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserInfoSpan;
+
+        /// <summary>
         /// NextButton control.
         /// </summary>
         /// <remarks>

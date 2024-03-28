@@ -58,7 +58,10 @@ namespace MP2_IT114L
             var recordsForPage = dt.Skip(skip).Take(PageSize);
 
             // Clear the table before populating with new data
-            T_Products.Rows.Clear();
+            for (int i = T_Products.Rows.Count - 1; i > 0; i--)
+            {
+                T_Products.Rows.RemoveAt(i);
+            }
             foreach (var record in recordsForPage)
             {
                 // Create a new row
@@ -117,7 +120,7 @@ namespace MP2_IT114L
             }
         }
 
-        protected void NextButton_Click(object sender, EventArgs e)
+        protected void NextProd_Click(object sender, EventArgs e)
         {
             currentPage++; // Update current page for next set of records
 
@@ -127,16 +130,17 @@ namespace MP2_IT114L
                 hiddenCurrentPage.Value = currentPage.ToString();
             }
 
+
             var RecordRepository = new RecordRepository();
             IEnumerable<Record> dt = RecordRepository.GetAllProducts();
             // Clear the table before fetching data for the next page
             PopulateTableProducts(dt);
-            PageInfoSpan.InnerText = $"Page {currentPage} of 10";
+            ProdInfoSpan.InnerText = $"Page {currentPage} of 10";
 
             // No need to redirect, data is fetched based on updated currentPage
         }
 
-        protected void PreviousButton_Click(object sender, EventArgs e)
+        protected void PreviousProd_Click(object sender, EventArgs e)
         {
             if (currentPage > 1) // Prevent going below page 1
             {
@@ -147,7 +151,12 @@ namespace MP2_IT114L
 
                 // No need to redirect, data is fetched based on updated currentPage
             }
-            PageInfoSpan.InnerText = $"Page {currentPage} of 10";
+            var RecordRepository = new RecordRepository();
+            IEnumerable<Record> dt = RecordRepository.GetAllProducts();
+            // Clear the table before fetching data for the next page
+            PopulateTableProducts(dt);
+            ProdInfoSpan.InnerText = $"Page {currentPage} of 10";
+
         }
 
 
