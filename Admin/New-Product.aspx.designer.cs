@@ -177,6 +177,15 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.TextBox TB_RecordName;
 
         /// <summary>
+        /// TB_RecordName_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TB_RecordName_Validator;
+
+        /// <summary>
         /// TB_Artist control.
         /// </summary>
         /// <remarks>
@@ -184,6 +193,15 @@ namespace MP2_IT114L
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Artist;
+
+        /// <summary>
+        /// TB_Artist_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TB_Artist_Validator;
 
         /// <summary>
         /// FU_Image control.
@@ -204,6 +222,15 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.DropDownList DDL_Genre;
 
         /// <summary>
+        /// DDL_Genre_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DDL_Genre_Validator;
+
+        /// <summary>
         /// TB_Price control.
         /// </summary>
         /// <remarks>
@@ -213,6 +240,24 @@ namespace MP2_IT114L
         protected global::System.Web.UI.WebControls.TextBox TB_Price;
 
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
+        /// TB_Price_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator TB_Price_Validator;
+
+        /// <summary>
         /// TB_Stock control.
         /// </summary>
         /// <remarks>
@@ -220,6 +265,24 @@ namespace MP2_IT114L
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TB_Stock;
+
+        /// <summary>
+        /// TB_Stock_Validator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TB_Stock_Validator;
+
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
         /// TB_Description control.

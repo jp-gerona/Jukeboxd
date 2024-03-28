@@ -45,7 +45,7 @@
                         </div>
                     </asp:HyperLink>
                 </div>
-                <asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="../index.aspx">
+                <asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="../Login.aspx">
                     <div class="nav-link">
                         <i class="ri-logout-box-line"></i>Logout
                     </div>

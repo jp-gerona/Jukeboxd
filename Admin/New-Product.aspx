@@ -47,7 +47,7 @@
                     </div>
                     </asp:HyperLink>
                 </div>
-                <asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="../index.html">
+                <asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="../Login.aspx">
                 <div class="nav-link">
                     <i class="ri-logout-box-line"></i>Logout
                 </div>
@@ -110,6 +110,12 @@
                             <asp:Label AssociatedControlID="TB_RecordName" Text="Title" runat="server" />
                         </legend>
                         <asp:TextBox ID="TB_RecordName" runat="server" placeholder="Name of vinyl record" />
+                        <asp:RequiredFieldValidator ID="TB_RecordName_Validator" runat="server"
+                            ControlToValidate="TB_RecordName"
+                            ErrorMessage="Record name is required!"
+                            Text="Record name is required!"
+                            ForeColor="Red"
+                            Display="Dynamic" />
                     </fieldset>
 
                     <fieldset>
@@ -117,6 +123,12 @@
                             <asp:Label AssociatedControlID="TB_Artist" Text="Artist" runat="server" />
                         </legend>
                         <asp:TextBox ID="TB_Artist" runat="server" placeholder="Artist of vinyl record" />
+                        <asp:RequiredFieldValidator ID="TB_Artist_Validator" runat="server"
+                            ControlToValidate="TB_Artist"
+                            ErrorMessage="Artist name is required!"
+                            Text="Artist name is required!"
+                            ForeColor="Red"
+                            Display="Dynamic" />
                     </fieldset>
 
                     <fieldset>
@@ -138,6 +150,13 @@
                             <asp:ListItem Text="Jazz" Value="4"></asp:ListItem>
                         </asp:DropDownList>
                         <i class="ri-arrow-drop-down-line"></i>
+                        <asp:RequiredFieldValidator ID="DDL_Genre_Validator" runat="server"
+                            ControlToValidate="DDL_Genre"
+                            InitialValue="-1"
+                            ErrorMessage="Genre selection is required!"
+                            Text="Genre selection is required!"
+                            ForeColor="Red"
+                            Display="Dynamic" />
                     </fieldset>
 
                     <fieldset>
@@ -145,6 +164,18 @@
                             <asp:Label AssociatedControlID="TB_Price" Text="Price" runat="server" />
                         </legend>
                         <asp:TextBox ID="TB_Price" runat="server" placeholder="Price of vinyl record (PHP)" />
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                            ControlToValidate="TB_Price"
+                            ErrorMessage="Price is required!"
+                            Text="Price is required!"
+                            ForeColor="Red"
+                            Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="TB_Price_Validator" runat="server"
+                            ControlToValidate="TB_Price"
+                            ErrorMessage="Please Enter Only Numbers"
+                            ValidationExpression="^\d+(\.\d+)?$"
+                            ForeColor="Red"
+                            Display="Dynamic" />
                     </fieldset>
 
                     <fieldset>
@@ -152,6 +183,18 @@
                             <asp:Label AssociatedControlID="TB_Stock" Text="Stock" runat="server" />
                         </legend>
                         <asp:TextBox ID="TB_Stock" runat="server" placeholder="Stock of vinyl record" />
+                        <asp:RequiredFieldValidator ID="TB_Stock_Validator" runat="server"
+                            ControlToValidate="TB_Stock"
+                            ErrorMessage="Stock is required!"
+                            Text="Stock is required!"
+                            ForeColor="Red"
+                            Display="Dynamic" />
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                            ControlToValidate="TB_Stock"
+                            ErrorMessage="Please Enter Only Numbers"
+                            ValidationExpression="^\d+$"
+                            ForeColor="Red"
+                            Display="Dynamic" />
                     </fieldset>
 
                     <fieldset>
@@ -162,7 +205,7 @@
                     </fieldset>
 
                     <div class="submit-container">
-                        <asp:Button ID="submit_add_product" runat="server" type="submit" CssClass="btn btn-primary" Text="Create Product" onclick="AddRecord_Click" />
+                        <asp:Button ID="submit_add_product" runat="server" CssClass="btn btn-primary" Text="Create Product" UseSubmitBehavior="true" OnClick="AddRecord_Click" />
                     </div>
 
                 </asp:Panel>
@@ -172,8 +215,6 @@
             <footer>
                 <p>Copyright &copy; <%: DateTime.Now.Year %> Orbit.</p>
                 <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
-                <%--type="button"--%>
-                <%--ClientIDMode="Static"--%>
             </footer>
         </main>
 

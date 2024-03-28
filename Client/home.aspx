@@ -17,7 +17,7 @@
 <body>
   <form runat="server">
     <nav class="nav-bar">
-      <a href="client/home.aspx" class="site-logo" id="logo">
+      <a href="home.aspx" class="site-logo" id="logo">
         <img src="../images/logo/Jukeboxd-full-dark.svg" alt="Jukeboxd Logo" />
       </a>
 
@@ -112,9 +112,15 @@
       </section>
 
       <footer>
-            <p>Copyright &copy; 2024 Orbit.</p>
-            <asp:Button ID="themeButton" runat="server" CssClass="btn btn-accent ri-sun-fill" ClientIDMode="Static" type="button" aria-label="Change to light theme" OnClientClick="return false;" Text="&#xF1BC;" />
-       </footer>
+        <p>Copyright &copy; 2024 Orbit.</p>
+        <button class="btn btn-accent"
+          type="button"
+          data-theme-toggle
+          aria-label="Change to light theme"
+          id="theme">
+          <i class="ri-sun-fill"></i>
+        </button>
+      </footer>
     </main>
   </form>
 

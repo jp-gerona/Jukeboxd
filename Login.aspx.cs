@@ -10,7 +10,11 @@ namespace MP2_IT114L
 {
     public partial class Login_Client : Page
     {
-        protected void LogAccount_Click(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+        }
+            protected void LogAccount_Click(object sender, EventArgs e)
         {
             string email = TB_email.Text;
             string password = TB_password.Text;
@@ -29,7 +33,7 @@ namespace MP2_IT114L
                 }
                 else
                 {
-                    Response.Redirect("~/Index.aspx");
+                    Response.Redirect("~/Client/home.aspx");
                 }
             }
             else

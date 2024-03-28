@@ -24,12 +24,21 @@ namespace MP2_IT114L
             byte[] recordImage = new byte[FU_Image.PostedFile.ContentLength];
             FU_Image.PostedFile.InputStream.Read(recordImage, 0, FU_Image.PostedFile.ContentLength);
             string genre = DDL_Genre.SelectedItem.Text;
-            float price = int.Parse(TB_Price.Text);
+            float price = float.Parse(TB_Price.Text);
             int stock = int.Parse(TB_Stock.Text);
             string description = TB_Description.Text;
 
             var RecordRepository = new RecordRepository();
             RecordRepository.AddRecord(recordName, recordArtist, recordImage, genre, price, stock, description);
+
+            TB_RecordName.Text = "";
+            TB_Artist.Text = "";
+            TB_Price.Text = "";
+            TB_Stock.Text = "";
+            TB_Description.Text = "";
+
+            DDL_Genre.SelectedIndex = 0;
+            FU_Image.Attributes.Clear();
         }
     }
 }
