@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Web;
 using System.Web.Caching;
@@ -11,23 +12,54 @@ namespace MP2_IT114L
 {
     public partial class Records : System.Web.UI.Page
     {
+        private const int PageSize = 10;
+        private int currentPage = 1;
+        private HiddenField hiddenCurrentPage; // Hidden field to store current page
+
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["LoggedInUserEmail"] == null)
             {
                 Response.Redirect("~/Login.aspx");
             }
+            hiddenCurrentPage = (HiddenField)FindControl("hiddenCurrentPage");
+
+            // Retrieve current page number from hidden field (or session if preferred)
+            if (!IsPostBack)
+            {
+                currentPage = 1; // Set default page on initial load
+            }
+            else
+            {
+                // Check if hiddenCurrentPage is found before accessing its Value property
+                if (hiddenCurrentPage != null)
+                {
+                    int.TryParse(hiddenCurrentPage.Value, out currentPage);
+                }
+            }
+
+
             // Fetch data from the database for the current page
             var RecordRepository = new RecordRepository();
-                IEnumerable<Record> dt = RecordRepository.GetAllProducts();
+            IEnumerable<Record> dt = RecordRepository.GetAllProducts();
 
-                // Populate the table with data
-                PopulateTableProducts(dt);
+            // Populate the table with data
+            PopulateTableProducts(dt);
         }
+
 
         private void PopulateTableProducts(IEnumerable<Record> dt)
         {
-            foreach (var record in dt)
+            // Skip records for previous pages
+            int skip = (currentPage - 1) * PageSize;
+
+            // Take only the required number of records for this page
+            var recordsForPage = dt.Skip(skip).Take(PageSize);
+
+            // Clear the table before populating with new data
+            T_Products.Rows.Clear();
+            foreach (var record in recordsForPage)
             {
                 // Create a new row
                 TableRow row = new TableRow();
@@ -84,5 +116,40 @@ namespace MP2_IT114L
                 T_Products.Rows.Add(row);
             }
         }
+
+        protected void NextButton_Click(object sender, EventArgs e)
+        {
+            currentPage++; // Update current page for next set of records
+
+            // Check if hiddenCurrentPage is found before accessing its Value property
+            if (hiddenCurrentPage != null)
+            {
+                hiddenCurrentPage.Value = currentPage.ToString();
+            }
+
+            var RecordRepository = new RecordRepository();
+            IEnumerable<Record> dt = RecordRepository.GetAllProducts();
+            // Clear the table before fetching data for the next page
+            PopulateTableProducts(dt);
+            PageInfoSpan.InnerText = $"Page {currentPage} of 10";
+
+            // No need to redirect, data is fetched based on updated currentPage
+        }
+
+        protected void PreviousButton_Click(object sender, EventArgs e)
+        {
+            if (currentPage > 1) // Prevent going below page 1
+            {
+                currentPage--;
+
+                // Update hidden field value (or session variable)
+                hiddenCurrentPage.Value = currentPage.ToString();
+
+                // No need to redirect, data is fetched based on updated currentPage
+            }
+            PageInfoSpan.InnerText = $"Page {currentPage} of 10";
+        }
+
+
     }
 }

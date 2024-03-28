@@ -10,9 +10,6 @@
     --border-2: 2px solid;
     --border-radius: 0.25rem;
     --border-alpha: rgba(221, 221, 221, 0.5);
-}
-
-[data-theme="light"] {
     --filled: var(--black);
     --background: #f9f5f1;
     --container: var(--white);
@@ -23,7 +20,8 @@
     --danger: #ea9794;
 }
 
-[data-theme="dark"] {
+
+.dark-mode {
     --filled: var(--gray);
     --background: #161717;
     --container: var(--black);
