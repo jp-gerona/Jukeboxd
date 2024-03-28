@@ -79,6 +79,7 @@
     </Content>
     <Content Include="Client\Checkout.aspx" />
     <Content Include="Client\home.aspx" />
+    <Content Include="Client\Profile.aspx" />
     <Content Include="Client\Signup-Client.aspx" />
     <Content Include="Images\logo\Atlantic-logo.svg" />
     <Content Include="Images\logo\Jukeboxd-banner.jpeg" />
@@ -159,6 +160,13 @@
     </Compile>
     <Compile Include="Client\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Client\Signup-Client.aspx.cs">
       <DependentUpon>Signup-Client.aspx</DependentUpon>
