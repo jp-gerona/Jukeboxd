@@ -18,7 +18,7 @@
         <main id="main-login">
             <div class="login-container">
                 <header>
-                    <a class="site-logo" href="./home.html">
+                    <a class="site-logo" href="client/home.aspx">
                         <img src="../images/logo/Jukeboxd-full.svg" alt="Jukeboxd Logo" />
                     </a>
                     <a class="link" href="../Client/Signup-Client.aspx">Sign up</a>
@@ -36,7 +36,7 @@
                     <fieldset>
                         <asp:Button ID="LogAccount" runat="server" Text="Login" OnClientClick="return validateForm()" OnClick="LogAccount_Click" CssClass="btn btn-primary" /> 
                     </fieldset>                    
-                    <a href="./home.html"><i class="ri-arrow-left-line"></i>Go back to homepage</a>
+                    <a href="client/home.aspx"><i class="ri-arrow-left-line"></i>Go back to homepage</a>
                 </div>
             </div>
             <div class="login-background-container"></div>
