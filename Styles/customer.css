@@ -51,6 +51,28 @@
     margin-bottom: 4rem;
 }
 
+.records-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 100%;
+}
+
+.record-card {
+    border: var(--border-2) var(--filled);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition-property: transform, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.15s;
+    cursor: pointer;
+    height: 100%;
+    max-width: 100%;
+    background-position: center;
+}
+
 .login-background-container,
 .signup-background-container {
     flex-basis: 60%;
